@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --color-bg-main: var(--bg-main);
+  --color-bg-card: var(--bg-card);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  --shadow-glow: 0 0 30px 0 rgba(157, 133, 255, 0.3);
+}
+
+@layer base {
+  :root {
+    --bg-main: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --primary: #9D85FF;
+    --secondary: #FCA5A5;
+    --accent: #FCD34D;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+  }
+
+  .dark {
+    --bg-main: #0B0A0F;
+    --bg-card: #16141F;
+    --primary: #9D85FF;
+    --secondary: #FCA5A5;
+    --accent: #FCD34D;
+    --text-primary: #FFFFFF;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+  }
+  
+  body {
+    @apply bg-bg-main text-text-primary font-sans antialiased transition-colors duration-300;
+    background-image: 
+      linear-gradient(to right, rgba(148, 163, 184, 0.15) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(148, 163, 184, 0.15) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-attachment: fixed;
+  }
+  
+  .dark body {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[#EC4899];
+  }
+  
+  .text-outline {
+    -webkit-text-stroke: 1.5px var(--color-primary);
+    color: transparent;
+  }
+  
+  .text-outline-thin {
+    -webkit-text-stroke: 1px var(--color-primary);
+    color: transparent;
+  }
+  
+  .dark .text-outline {
+    -webkit-text-stroke: 2px var(--color-primary);
+    color: transparent;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-bg-card rounded-2xl relative transition-all duration-300 border border-gray-200 dark:border-gray-800 shadow-sm;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-[#EC4899] text-white font-bold px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 shadow-glow inline-flex items-center justify-center gap-2;
+  }
+  
+  .pill-tag {
+    @apply px-4 py-2 bg-gray-100 dark:bg-gray-800 text-text-secondary font-mono text-xs rounded-full flex items-center justify-center;
+  }
+  
+  .section-header {
+    @apply font-mono text-text-muted text-sm flex items-center gap-4 uppercase tracking-widest;
+  }
+  
+  .section-header::before {
+    content: "//";
+    @apply text-primary;
+  }
+  
+  .section-header::after {
+    content: "";
+    @apply flex-grow h-[1px] bg-gray-200 dark:bg-gray-800 ml-4;
+  }
+}

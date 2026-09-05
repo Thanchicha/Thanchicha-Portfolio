@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, X } from 'lucide-react';
+import { ArrowRight, X, Code, FileText, ExternalLink } from 'lucide-react';
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [filter, setFilter] = useState('All');
 
   // Lock body scroll when modal is open
   useEffect(() => {
@@ -38,6 +39,15 @@ const searchOutfits = (filters, availabilityCalendar) =>
     matchesMeasurements(item, filters.bodyMeasurements) && 
     !isBooked(item, availabilityCalendar, filters.dates)
   );`,
+      links: [
+        { label: "View Source Code", url: "#", icon: "github" },
+        { label: "Technical Documentation", url: "#", icon: "doc" }
+      ],
+      gallery: [
+        { url: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop", caption: "Team pitch at SIT Innoventure" },
+        { url: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop", caption: "Business model canvas workshop" },
+        { url: "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?q=80&w=800&auto=format&fit=crop", caption: "Co-founder strategy meeting" }
+      ],
       tags: ["Business Analysis", "System Logic Design", "Revenue Engineering", "Market Validation", "Figma", "Draw.io"]
     },
     {
@@ -54,7 +64,16 @@ function calcRecommendedOrder(guestCount, gramsPerHead, bufferRate, leftOverStoc
   const base = (guestCount * gramsPerHead) / 1000;
   const buffered = base * (1 + bufferRate / 100);
   return Math.max(0, buffered - leftOverStock);
-}`,
+} `,
+      links: [
+        { label: "View Source Code", url: "#", icon: "github" },
+        { label: "Technical Documentation", url: "#", icon: "doc" }
+      ],
+      gallery: [
+        { url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop", caption: "Data Dashboard & Analytics" },
+        { url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop", caption: "B2B Procurement Flow" },
+        { url: "https://images.unsplash.com/photo-1507238692062-5a04ecddef8f?q=80&w=800&auto=format&fit=crop", caption: "System architecture mapping" }
+      ],
       tags: ["Vanilla JavaScript (ES6+)", "HTML5", "CSS3", "Local Storage API", "Draw.io", "System Architecture"]
     },
     {
@@ -75,6 +94,15 @@ const RoomCard = ({ room, isAvailable }) => (
     <StatusBadge status={room.status} />
   </div>
 );`,
+      links: [
+        { label: "View Source Code", url: "#", icon: "github" },
+        { label: "Technical Documentation", url: "#", icon: "doc" }
+      ],
+      gallery: [
+        { url: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop", caption: "Hackathon pitching day" },
+        { url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop", caption: "Team brainstorming" },
+        { url: "https://images.unsplash.com/photo-1542744094-3a31f272c490?q=80&w=800&auto=format&fit=crop", caption: "Figma to Code execution" }
+      ],
       tags: ["React", "Tailwind CSS", "Booking System Architecture", "UI/UX Alignment", "Rapid Prototyping"]
     },
     {
@@ -94,6 +122,15 @@ public void UpdateTherapyProgress(float movementData) {
     // Inclusive UX: Large, high-contrast visual cues
   }
 }`,
+      links: [
+        { label: "View Source Code", url: "#", icon: "github" },
+        { label: "Technical Documentation", url: "#", icon: "doc" }
+      ],
+      gallery: [
+        { url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop", caption: "IoT device testing" },
+        { url: "https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=800&auto=format&fit=crop", caption: "Patient rehabilitation demo" },
+        { url: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=800&auto=format&fit=crop", caption: "Data processing metrics" }
+      ],
       tags: ["Inclusive Design (UX/UI)", "IoT Ecosystem Mapping", "Technical Pitching", "Unity & C# Prototyping"]
     },
     {
@@ -114,6 +151,15 @@ def calc_roi(baseline_waste_kg, reduction_rate, cost_per_kg):
     'waste_saved_kg': waste_saved,
     'annual_cost_saving': cost_saved
   }`,
+      links: [
+        { label: "View Source Code", url: "#", icon: "github" },
+        { label: "Technical Documentation", url: "#", icon: "doc" }
+      ],
+      gallery: [
+        { url: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop", caption: "Field research at Makro" },
+        { url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop", caption: "Business case presentation" },
+        { url: "https://images.unsplash.com/photo-1507238692062-5a04ecddef8f?q=80&w=800&auto=format&fit=crop", caption: "ROI validation modeling" }
+      ],
       tags: ["Business Case Validation", "Customer Journey Mapping", "Financial & ROI Modeling", "Data Discovery", "Cross-Functional Leadership"]
     },
     {
@@ -133,23 +179,49 @@ app.get('/api/listings', async (req, res) => {
   );
   res.json(rows);
 });`,
+      links: [
+        { label: "View Source Code", url: "#", icon: "github" },
+        { label: "Technical Documentation", url: "#", icon: "doc" }
+      ],
+      gallery: [
+        { url: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop", caption: "96-hour marathon coding" },
+        { url: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop", caption: "API integration setup" },
+        { url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop", caption: "Demo deployment" }
+      ],
       tags: ["React", "Tailwind CSS", "Node.js", "MySQL", "Agile Delivery", "Full-Stack Integration"]
     }
   ];
 
+  const filteredProjects = projects.filter(project => {
+    if (filter === 'All') return true;
+    return project.timeline.includes(filter);
+  });
+
   return (
     <section id="projects" className="py-24 px-6 border-t border-gray-200 dark:border-gray-800 overflow-hidden bg-bg-main">
       <div className="max-w-[1400px] mx-auto">
-        <div className="flex items-end justify-between mb-16 pr-4">
-          <div className="section-header">04 FEATURED_PROJECTS</div>
-          <div className="font-mono text-text-muted text-sm tracking-widest hidden md:block">6 ITEMS</div>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 pr-4 gap-6">
+          <div className="section-header">05 CASE_STUDIES</div>
+          <div className="flex flex-wrap items-center gap-2 md:gap-4">
+            {['All', '2026', '2025'].map(f => (
+              <button 
+                key={f} 
+                onClick={() => setFilter(f)}
+                className={`font-mono text-[11px] md:text-sm tracking-widest uppercase px-4 py-1.5 md:py-2 rounded-full transition-colors border ${filter === f ? 'bg-text-primary text-bg-main border-text-primary dark:bg-white dark:text-black dark:border-white font-bold' : 'bg-transparent text-text-muted border-gray-200 dark:border-gray-800 hover:text-text-primary hover:border-gray-400 dark:hover:border-gray-600'}`}
+              >
+                {f}
+              </button>
+            ))}
+            <div className="font-mono text-text-muted text-[11px] md:text-sm tracking-widest ml-4 hidden md:block">{filteredProjects.length} ITEMS</div>
+          </div>
         </div>
         
         {/* Horizontal Scroll Container */}
         <div className="flex gap-8 overflow-x-auto pb-12 snap-x hide-scrollbar px-4 -mx-4">
-          {projects.map((project, idx) => (
-            <motion.div 
-              key={idx}
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project, idx) => (
+              <motion.div 
+                key={project.title}
               onClick={() => setSelectedProject(project)}
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -229,6 +301,7 @@ app.get('/api/listings', async (req, res) => {
               </div>
             </motion.div>
           ))}
+          </AnimatePresence>
           
           {/* End of projects indicator */}
           <div className="min-w-[250px] flex flex-col items-center justify-center snap-center px-8 text-center group">
@@ -319,11 +392,44 @@ app.get('/api/listings', async (req, res) => {
                   // SYSTEM_LOGIC
                 </div>
                 
-                <div className="w-full bg-[#f8fafc] dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 md:p-8 mb-16 overflow-x-auto shadow-sm">
+                <div className="w-full bg-[#f8fafc] dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 md:p-8 mb-10 overflow-x-auto shadow-sm">
                   <pre className="font-mono text-[13px] md:text-sm text-[#475569] dark:text-[#94a3b8] whitespace-pre-wrap leading-[1.7]">
                     {selectedProject.code}
                   </pre>
                 </div>
+
+                {/* Related Links */}
+                {selectedProject.links && selectedProject.links.length > 0 && (
+                  <div className="flex flex-wrap gap-4 mb-16">
+                    {selectedProject.links.map((link, i) => (
+                      <a key={i} href={link.url} target="_blank" rel="noreferrer" className="flex items-center gap-2 px-4 py-2.5 bg-transparent border border-gray-200 dark:border-gray-800 rounded-lg text-[13px] font-mono font-semibold text-text-primary hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                        {link.icon === 'github' ? <Code size={16} /> : <FileText size={16} />}
+                        {link.label} <ExternalLink size={14} className="ml-1 opacity-50" />
+                      </a>
+                    ))}
+                  </div>
+                )}
+
+                {/* Activity Gallery */}
+                {selectedProject.gallery && selectedProject.gallery.length > 0 && (
+                  <>
+                    <div className="font-mono text-text-muted text-xs font-semibold tracking-widest uppercase mb-6 flex items-center gap-4">
+                      // ACTIVITY_GALLERY
+                    </div>
+                    {/* Custom scrollbar class or standard Tailwind scroll-snap */}
+                    <div className="flex overflow-x-auto gap-4 pb-4 mb-12 snap-x rounded-xl" style={{ scrollbarWidth: 'thin', scrollbarColor: '#334155 transparent' }}>
+                      {selectedProject.gallery.map((img, i) => (
+                        <div key={i} className="min-w-[280px] md:min-w-[320px] h-48 md:h-56 relative rounded-xl overflow-hidden snap-center group border border-gray-200 dark:border-gray-800 shrink-0 bg-gray-100 dark:bg-gray-900">
+                          <img src={img.url} alt={img.caption} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                          <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-mono font-medium truncate">
+                            {img.caption}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
 
                 {/* Tech Stack */}
                 <div className="font-mono text-text-muted text-xs font-semibold tracking-widest uppercase mb-6 flex items-center gap-4">

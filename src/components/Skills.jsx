@@ -13,13 +13,15 @@ export default function Skills() {
   };
 
   const skillData = {
-    // [BIZ]
+    // [PRODUCT]
     "Design Thinking": "Applied Design Thinking across Cosaki and Coral Supply to validate product-market fit before committing to development.",
     "Product Development": "Led product strategy and revenue engineering for Cosaki, pivoting to a sustainable business model.",
     "Customer Journey Mapping": "Mapped out end-to-end Customer Journeys of commercial buyers at Makro wholesale centers to validate AI features.",
     "Lean Canvas": "Structured business cases and validated assumptions using Lean Canvas methodologies during SIT Innoventure and hackathons.",
     "Financial Planning & ROI": "Developed comprehensive financial plans, cost-benefit analyses, and ROI models for the Makro Pro AI food preservation feature.",
     "Pitching & Storytelling": "Crafted and delivered a high-impact, story-driven pitch to a panel of international judges at NTU Hackathon 2026.",
+    "Requirement Definition": "Translated business and user needs into structured flows, system logic, and practical implementation direction across multidisciplinary projects.",
+    "Prioritization": "Balanced user value, business viability, technical feasibility, and delivery constraints when shaping project scope.",
     
     // [UX]
     "User Research & Interviews": "Executed on-site ethnographic research at Makro wholesale centers and cosplay community field research for Cosaki.",
@@ -29,15 +31,25 @@ export default function Skills() {
     "Draw.io": "Engineered a 'Lazy-Input & Data-Driven' system blueprint using Draw.io to align technical expectations across mentors and devs.",
     "Maze": "Conducted usability testing and validated UI/UX assumptions through rapid prototyping workflows.",
 
-    // [DEV]
+    // [DATA]
+    "Data Analysis": "Used research findings, operational inputs, and business data to identify patterns and support solution decisions.",
+    "KPI & Metric Definition": "Connected product ideas to measurable outcomes through cost, waste-reduction, usage, and business-impact indicators.",
+    "Research Synthesis": "Converted interviews, observations, and desk research into themes, insights, and actionable opportunities.",
+    "SQL / MySQL": "Worked with relational schemas and data flows to understand how product interfaces connect with stored information.",
+
+    // [DELIVERY]
     "React": "Developed responsive and clean web marketplace interfaces using React, ensuring core transactional flows were highly intuitive.",
     "Tailwind CSS": "Built highly reusable UI components using Tailwind CSS, ensuring consistency across booking screens.",
     "JavaScript (ES6+)": "Programmed the core file-parsing engine, mathematical algorithm execution, and dynamic data binding using pure Vanilla JS.",
     "HTML / CSS": "Crafted a highly responsive, fast-loading, and clean user interface using native HTML5 and CSS3.",
     "Node.js": "Proactively self-taught and applied Node.js backend concepts to handle data routing constraints during the SIT Hackathon.",
     "MySQL": "Handled database schemas and data pipelines between the user interface and MySQL database layer under pressure.",
+    "Stakeholder Alignment": "Communicated product logic and trade-offs across business, design, and technical perspectives.",
+    "Project Planning": "Worked within fixed hackathon and internship timelines, translating scope into concrete deliverables.",
+    "Documentation": "Created system flows, business cases, prototypes, and supporting materials to keep project direction understandable.",
+    "Blocker Resolution": "Adapted scope and learned unfamiliar technologies to unblock delivery under time constraints.",
 
-    // [TOOL]
+    // [TECH]
     "Git & GitHub": "Managed continuous integration of full-stack elements, debugging architectural data flows using Git version control.",
     "VS Code": "Utilized VS Code for rapid prototyping, debugging, and executing production-ready client-side architectures.",
     "Agile Mindset": "Iterated rapidly through 96-hour hackathons, adapting to unexpected integration blocks with a flexible Agile approach.",
@@ -46,37 +58,37 @@ export default function Skills() {
 
   const skillCategories = [
     {
-      id: "[BIZ]",
-      title: "Business & Innovation",
+      id: "[PRODUCT]",
+      title: "Product & Business",
       icon: <Briefcase size={20} />,
-      skills: ["Design Thinking", "Product Development", "Customer Journey Mapping", "Lean Canvas", "Financial Planning & ROI", "Pitching & Storytelling"]
+      skills: ["Product Development", "Requirement Definition", "Prioritization", "Customer Journey Mapping", "Financial Planning & ROI", "Pitching & Storytelling"]
     },
     {
-      id: "[UX]",
-      title: "UX/UI Design & Research",
+      id: "[DATA]",
+      title: "Data & Insights",
       icon: <PenTool size={20} />,
-      skills: ["User Research & Interviews", "Information Architecture", "Wireframing & Prototyping", "Figma", "Draw.io", "Maze"]
+      skills: ["Data Analysis", "KPI & Metric Definition", "Research Synthesis", "SQL / MySQL", "User Research & Interviews", "Financial Planning & ROI"]
     },
     {
-      id: "[DEV]",
-      title: "Web Development",
+      id: "[DELIVERY]",
+      title: "Delivery & Collaboration",
       icon: <Code size={20} />,
-      skills: ["React", "Tailwind CSS", "JavaScript (ES6+)", "HTML / CSS", "Node.js", "MySQL"]
+      skills: ["Stakeholder Alignment", "Project Planning", "Documentation", "Blocker Resolution", "Agile Mindset", "Pitching & Storytelling"]
     },
     {
-      id: "[TOOL]",
-      title: "Developer Tools",
+      id: "[TECH]",
+      title: "Technology & Prototyping",
       icon: <Wrench size={20} />,
-      skills: ["Git & GitHub", "VS Code", "Agile Mindset", "Local Storage API"]
+      skills: ["Figma", "Draw.io", "Wireframing & Prototyping", "JavaScript (ES6+)", "React", "SQL / MySQL"]
     }
   ];
 
   return (
     <section id="skills" className="py-24 px-6 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-[1400px] mx-auto">
-        <div className="section-header mb-8">03 SKILL_MATRIX</div>
+        <div className="section-header mb-8">04 CAPABILITY_MATRIX</div>
         <p className="text-text-secondary text-base mb-12 max-w-2xl">
-          Four interconnected domains. Click any skill chip to reveal concrete evidence of application.
+          Four connected capability areas, grounded in how I approach product and business problems. Select a skill to see the current evidence.
         </p>
         
         <div className="grid md:grid-cols-2 gap-6">

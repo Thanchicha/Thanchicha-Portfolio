@@ -1,0 +1,47 @@
+<style>
+  @keyframes floaty { 0%,100%{transform:translateY(0) rotate(-2deg)} 50%{transform:translateY(-9px) rotate(1deg)} }
+  @keyframes scan { 0%{top:12%} 50%{top:82%} 100%{top:12%} }
+  @keyframes orbit { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+  @keyframes carddrift { 0%,100%{transform:translate(0,0)} 50%{transform:translate(5px,-7px)} }
+  .portrait-base{background:linear-gradient(150deg,#9d85ff,#ec4899);display:grid;place-items:center;color:white;font:bold 11px monospace;overflow:hidden}
+</style>
+
+<h2>How should your portrait come alive?</h2>
+<p class="subtitle">These are motion treatments layered onto the current grid, purple–pink palette, and technical blueprint style.</p>
+
+<div class="cards">
+  <div class="card" data-choice="floating-cutout" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8fafc;min-height:260px;position:relative;overflow:hidden;background-image:linear-gradient(#cbd5e155 1px,transparent 1px),linear-gradient(90deg,#cbd5e155 1px,transparent 1px);background-size:24px 24px">
+      <div class="portrait-base" style="position:absolute;width:142px;height:202px;left:50%;top:28px;margin-left:-71px;border-radius:72px 72px 22px 22px;animation:floaty 4s ease-in-out infinite">YOUR PHOTO<br>background removed</div>
+      <span style="position:absolute;left:16px;top:38px;background:#9d85ff;color:#111;padding:7px 9px;font:bold 8px monospace;animation:carddrift 3s ease-in-out infinite">PRODUCT</span>
+      <span style="position:absolute;right:15px;top:82px;background:#fcd34d;color:#111;padding:7px 9px;font:bold 8px monospace;animation:carddrift 4s ease-in-out infinite reverse">DATA</span>
+      <span style="position:absolute;left:19px;bottom:34px;background:#ec4899;color:white;padding:7px 9px;font:bold 8px monospace;animation:carddrift 3.5s ease-in-out infinite">BUSINESS</span>
+    </div>
+    <div class="card-body"><h3>A — Floating Cutout</h3><p>A clean cutout portrait gently floats while capability tags react around it. Playful, clear, and highly personal.</p></div>
+  </div>
+
+  <div class="card" data-choice="identity-scanner" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0b0a0f;min-height:260px;position:relative;overflow:hidden">
+      <div style="position:absolute;width:190px;height:190px;left:50%;top:34px;margin-left:-95px;border:1px solid #9d85ff;border-radius:50%">
+        <div class="portrait-base" style="width:154px;height:154px;margin:17px;border-radius:50%">YOUR PHOTO</div>
+        <div style="position:absolute;inset:-14px;border:1px dashed #ec489999;border-radius:50%;animation:orbit 12s linear infinite"></div>
+        <div style="position:absolute;left:7px;right:7px;height:2px;background:#fcd34d;box-shadow:0 0 12px #fcd34d;animation:scan 3s ease-in-out infinite"></div>
+      </div>
+      <div style="position:absolute;left:12px;bottom:12px;color:#9d85ff;font:8px monospace">IDENTITY: PRODUCT–BUSINESS TRANSLATOR<br>STATUS: OPEN TO INTERNSHIP</div>
+    </div>
+    <div class="card-body"><h3>B — Identity Scanner</h3><p>A circular portrait with scanning and orbit motion. Strongest technical feel, but can resemble a developer portfolio.</p></div>
+  </div>
+
+  <div class="card" data-choice="artifact-stack" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f8fafc;min-height:260px;position:relative;overflow:hidden;background-image:linear-gradient(#cbd5e155 1px,transparent 1px),linear-gradient(90deg,#cbd5e155 1px,transparent 1px);background-size:24px 24px">
+      <div style="position:absolute;left:22px;top:33px;width:145px;height:185px;background:white;border:1px solid #d8dee8;padding:8px;transform:rotate(-5deg);box-shadow:0 12px 30px #64748b33;animation:floaty 5s ease-in-out infinite">
+        <div class="portrait-base" style="height:142px">YOUR PHOTO</div><div style="font:bold 8px monospace;color:#475569;margin-top:8px">THE PERSON BEHIND THE PROCESS ↗</div>
+      </div>
+      <div style="position:absolute;right:18px;top:23px;width:112px;height:72px;background:#16141f;color:#9d85ff;padding:10px;font:8px monospace;transform:rotate(4deg);animation:carddrift 3.3s ease-in-out infinite">USER INSIGHT<br><b style="font-size:20px">→ 01</b><br>ACTION</div>
+      <div style="position:absolute;right:26px;bottom:30px;width:128px;height:83px;background:#fcd34d;color:#111;padding:10px;font:8px monospace;transform:rotate(-2deg);animation:carddrift 4.2s ease-in-out infinite reverse">CURRENT WORK<br><b style="font-size:14px">CASE STUDY</b><br>VIEW PROCESS →</div>
+    </div>
+    <div class="card-body"><h3>C — Living Artifact Stack</h3><p>Your portrait moves among research notes, metrics, and project artifacts. Rich storytelling and the closest fit for Product work.</p></div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:22px"><strong>My recommendation: C.</strong> It keeps your current identity, adds memorable motion, and immediately communicates that your value is the work and thinking—not only the visual effect.</p>

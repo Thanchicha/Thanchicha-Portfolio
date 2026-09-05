@@ -11,17 +11,17 @@ export default function Timeline() {
     },
     {
       year: "2026",
-      badge: "Award",
-      title: "Honorable Mention — Paw Guardian",
-      subtitle: "NTU Hackathon 2026",
-      desc: "Designed an empathetic IoT rehabilitation ecosystem for stroke patients. Led inclusive UX/UI design, Unity C# prototyping, and delivered a high-impact technical pitch winning Honorable Mention."
-    },
-    {
-      year: "2026",
       badge: "Venture",
       title: "Co-Founder & Product Lead — Cosaki",
       subtitle: "SIT Innoventure",
       desc: "Co-founded a peer-to-peer cosplay rental marketplace. Led business analysis, revenue engineering, e-KYC system design, and advanced filter search architecture. Currently in MVP Build & Delivery stage."
+    },
+    {
+      year: "2026",
+      badge: "Award",
+      title: "Honorable Mention — Paw Guardian",
+      subtitle: "NTU Hackathon 2026",
+      desc: "Designed an empathetic IoT rehabilitation ecosystem for stroke patients. Led inclusive UX/UI design, Unity C# prototyping, and delivered a high-impact technical pitch winning Honorable Mention."
     },
     {
       year: "2025",
@@ -51,7 +51,7 @@ export default function Timeline() {
       <div className="max-w-[1400px] mx-auto">
         <div className="flex items-center gap-4 mb-20">
           <div className="font-mono text-[#6366F1] font-bold text-sm tracking-widest uppercase shrink-0">
-            // 05 <span className="text-text-muted font-normal ml-2">EXPERIENCE_LOG</span>
+            // 06 <span className="text-text-muted font-normal ml-2">EXPERIENCE_LOG</span>
           </div>
           <div className="h-px flex-grow bg-gray-200 dark:bg-gray-800"></div>
         </div>

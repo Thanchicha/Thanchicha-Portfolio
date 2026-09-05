@@ -5,23 +5,23 @@ export default function About() {
   const coreValues = [
     {
       id: "01",
-      title: "Tech-Savvy Communicator",
-      desc: "Having a foundational background in frontend development and database structures, I act as an effective translator between business stakeholders and developers—ensuring requirements are seamlessly converted into scalable system designs."
+      title: "Business–Tech Translator",
+      desc: "I connect business goals with technical realities, turning stakeholder needs into clear requirements and shared language for delivery teams."
     },
     {
       id: "02",
-      title: "Analytical & Systemic Thinker",
-      desc: "I thrive on breaking down complex, chaotic problems into clean, structured logic, processes, and functional system architectures."
+      title: "Structured Problem Solver",
+      desc: "I break ambiguous problems into evidence, assumptions, priorities, and practical next steps that a team can act on."
     },
     {
       id: "03",
-      title: "User-Centric Design",
-      desc: "Every decision starts with the user. I validate assumptions through user research and prototyping before committing to implementation."
+      title: "Evidence-Led Thinker",
+      desc: "I use user research, data, and rapid prototypes to test assumptions and support product and business decisions."
     },
     {
       id: "04",
-      title: "Continuous Learning",
-      desc: "Staying current with emerging technologies, frameworks, and methodologies through hands-on building and hackathon participation."
+      title: "Hands-On Collaborator",
+      desc: "I learn new tools quickly, communicate across disciplines, and stay involved from early discovery through execution and iteration."
     }
   ];
 
@@ -38,7 +38,7 @@ export default function About() {
           className="mb-24 max-w-4xl"
         >
           <h2 className="text-2xl md:text-3xl lg:text-4xl text-text-primary leading-[1.4] font-normal tracking-tight">
-            I am passionate about bridging the gap between business goals and technical systems. My core focus is on creating meaningful digital products and processes that not only solve real-world problems for users but also drive sustainable growth and system efficiency for organizations.
+            I work at the intersection of business, users, data, and technology. I enjoy turning complex problems into clear product direction, aligning people around practical decisions, and helping teams move from an idea to a solution that creates measurable value.
           </h2>
         </motion.div>
         
@@ -131,20 +131,20 @@ export default function About() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Business Analysis (BA)",
-                desc: "Full-cycle requirement elicitation, stakeholder mapping, and business case validation with traceability from goal to shipped feature."
+                title: "Product & Business Analysis",
+                desc: "Framing problems, mapping stakeholders, defining requirements, and connecting user needs to business outcomes."
               },
               {
-                title: "System Logic Design",
-                desc: "Designing scalable system architectures with clear data flow, conflict-resolution logic, and well-defined API contracts."
+                title: "Data-Informed Decisions",
+                desc: "Using research, operational data, and success metrics to identify opportunities and support prioritization."
               },
               {
-                title: "Frontend Development",
-                desc: "Building responsive, accessible interfaces with React, Tailwind CSS, and Vanilla JS — from component libraries to full-stack integration."
+                title: "Cross-Functional Delivery",
+                desc: "Aligning business, design, and development teams while tracking timelines, decisions, risks, and blockers."
               },
               {
-                title: "Revenue Engineering",
-                desc: "Translating market research and user empathy into sustainable revenue models, financial plans, and ROI analyses."
+                title: "Technical Prototyping",
+                desc: "Using no-code tools, system thinking, and foundational development knowledge to test ideas and communicate with engineers."
               }
             ].map((str, idx) => (
               <motion.div 

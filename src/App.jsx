@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Process from './components/Process';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Timeline from './components/Timeline';
@@ -35,6 +36,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Process />
         <Skills />
         <Projects />
         <Timeline />
@@ -43,7 +45,7 @@ function App() {
       <footer className="pb-12 pt-4 px-6 text-gray-500 dark:text-gray-400 text-[11px] md:text-xs font-mono font-semibold bg-bg-main">
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 border-t border-gray-200 dark:border-gray-800 pt-8">
           <div>© 2026 Thanchicha Hempichit. All rights reserved.</div>
-          <div>Built with React + Tailwind • Designed as a Systemic Blueprint</div>
+          <div>Product • Business • Data • Technology</div>
         </div>
       </footer>
     </div>

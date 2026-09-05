@@ -56,6 +56,7 @@ export default function Navbar({ toggleTheme, isDark }) {
           <div className="hidden lg:flex justify-center items-center gap-6 xl:gap-8 font-semibold uppercase tracking-widest text-text-muted">
             <a href="#hero" className="hover:text-primary transition-colors">Overview</a>
             <a href="#about" className="hover:text-primary transition-colors">About</a>
+            <a href="#process" className="hover:text-primary transition-colors">Process</a>
             <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
             <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
             <a href="#timeline" className="hover:text-primary transition-colors">Timeline</a>
@@ -103,6 +104,7 @@ export default function Navbar({ toggleTheme, isDark }) {
               <div className="flex flex-col py-6 px-6 gap-4 font-semibold uppercase tracking-widest text-text-muted text-sm text-center">
                 <a href="#hero" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Overview</a>
                 <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">About</a>
+                <a href="#process" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Process</a>
                 <a href="#skills" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Skills</a>
                 <a href="#projects" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Projects</a>
                 <a href="#timeline" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Timeline</a>

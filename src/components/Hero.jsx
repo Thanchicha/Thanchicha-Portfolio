@@ -14,7 +14,7 @@ export default function Hero() {
     visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } }
   };
 
-  const marqueeText = "System Logic Design ★ React ★ UX Research ★ Design Thinking ★ Revenue Engineering ★ Figma ★ Tailwind CSS ★ ".repeat(4);
+  const marqueeText = "Product Discovery ★ Business Analysis ★ Data-Informed Decisions ★ Cross-Functional Delivery ★ Technical Communication ★ ".repeat(4);
 
   return (
     <section id="hero" className="h-[100dvh] w-full relative overflow-hidden flex flex-col bg-bg-main">
@@ -80,20 +80,20 @@ export default function Hero() {
 
           {/* Tags */}
           <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3 mt-4">
-            <span className="px-4 py-1.5 md:px-6 md:py-2 rounded-full bg-primary text-[#0B0A0F] font-bold text-xs md:text-sm shadow-glow">BA / SA</span>
+            <span className="px-4 py-1.5 md:px-6 md:py-2 rounded-full bg-primary text-[#0B0A0F] font-bold text-xs md:text-sm shadow-glow">Product & Business</span>
             <span className="text-text-muted">×</span>
             {/* Fix Tailwind v4 opacity syntax: bg-[#EC4899]/10 border-[#EC4899]/30 */}
-            <span className="px-4 py-1.5 md:px-6 md:py-2 rounded-full bg-[#EC4899]/10 text-[#EC4899] font-bold text-xs md:text-sm border border-[#EC4899]/30">Frontend Developer</span>
+            <span className="px-4 py-1.5 md:px-6 md:py-2 rounded-full bg-[#EC4899]/10 text-[#EC4899] font-bold text-xs md:text-sm border border-[#EC4899]/30">Data & Technology</span>
           </motion.div>
 
           {/* Description and CTA */}
           <motion.div variants={itemVariants} className="max-w-3xl lg:w-1/2 mt-6 relative flex flex-col items-start gap-8">
             <p className="text-[15px] sm:text-base lg:text-[19px] text-gray-400 dark:text-gray-300 leading-relaxed font-medium">
-              Bridging the gap between business goals and technical systems. Analyzing requirements, designing data-driven solutions, and translating complex processes into functional system architectures.
+              I turn ambiguous business and user problems into structured requirements, data-informed decisions, and practical digital solutions—working comfortably across business and technical teams.
             </p>
             
             <a href="#projects" className="bg-gradient-to-r from-[#9D85FF] to-[#FFA3B5] text-[#0B0A0F] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-all duration-300 shadow-glow inline-flex items-center justify-center gap-2 group text-sm md:text-base">
-              See My Projects 
+              Explore Case Studies 
               <motion.span 
                 animate={{ y: [0, 4, 0] }} 
                 transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

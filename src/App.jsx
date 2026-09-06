@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Route, Routes, useParams } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,7 +9,7 @@ import Projects from './components/Projects';
 import Timeline from './components/Timeline';
 import Contact from './components/Contact';
 
-function App() {
+function PortfolioShell({ children }) {
   const [isDark, setIsDark] = useState(() => {
     const saved = localStorage.getItem('theme');
     if (saved !== null) {
@@ -33,15 +34,7 @@ function App() {
   return (
     <div className="min-h-screen transition-colors duration-300">
       <Navbar toggleTheme={toggleTheme} isDark={isDark} />
-      <main>
-        <Hero />
-        <About />
-        <Process />
-        <Skills />
-        <Projects />
-        <Timeline />
-        <Contact />
-      </main>
+      {children}
       <footer className="pb-12 pt-4 px-6 text-gray-500 dark:text-gray-400 text-[11px] md:text-xs font-mono font-semibold bg-bg-main">
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 border-t border-gray-200 dark:border-gray-800 pt-8">
           <div>© 2026 Thanchicha Hempichit. All rights reserved.</div>
@@ -49,6 +42,63 @@ function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function HomePage() {
+  return (
+    <main>
+      <h1 className="sr-only">
+        I turn user and business problems into product decisions and working solutions.
+      </h1>
+      <Hero />
+      <About />
+      <Process />
+      <Skills />
+      <Projects />
+      <Timeline />
+      <Contact />
+    </main>
+  );
+}
+
+function WorkIndexPage() {
+  return (
+    <main className="min-h-screen px-6 pt-36 md:px-12 lg:px-20">
+      <h1 className="text-4xl font-bold text-text-primary">Selected Work</h1>
+    </main>
+  );
+}
+
+function CaseStudyPage() {
+  const { slug } = useParams();
+  const title = slug === 'cosaki' ? 'Cosaki Case Study' : 'Project Case Study';
+
+  return (
+    <main className="min-h-screen px-6 pt-36 md:px-12 lg:px-20">
+      <h1 className="text-4xl font-bold text-text-primary">{title}</h1>
+    </main>
+  );
+}
+
+function NotFoundPage() {
+  return (
+    <main className="min-h-screen px-6 pt-36 md:px-12 lg:px-20">
+      <h1 className="text-4xl font-bold text-text-primary">Page not found</h1>
+    </main>
+  );
+}
+
+function App() {
+  return (
+    <PortfolioShell>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/work" element={<WorkIndexPage />} />
+        <Route path="/work/:slug" element={<CaseStudyPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </PortfolioShell>
   );
 }
 

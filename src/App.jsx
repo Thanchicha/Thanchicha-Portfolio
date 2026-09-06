@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import WorkIndexPage from './pages/WorkIndexPage';
 import CaseStudyPage from './pages/CaseStudyPage';
 import NotFoundPage from './pages/NotFoundPage';
+import { pageMetadata } from './lib/metadata';
 
 function PortfolioShell({ children }) {
+  const { pathname } = useLocation();
   const [isDark, setIsDark] = useState(() => {
     const saved = localStorage.getItem('theme');
     if (saved !== null) {
@@ -25,6 +28,14 @@ function PortfolioShell({ children }) {
       localStorage.setItem('theme', 'light');
     }
   }, [isDark]);
+
+  useEffect(() => {
+    const key = pathname === '/' ? 'home' : pathname.split('/').filter(Boolean).pop();
+    const { title, description } = pageMetadata(key);
+    document.title = title;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', description);
+  }, [pathname]);
 
   const toggleTheme = () => setIsDark(!isDark);
 

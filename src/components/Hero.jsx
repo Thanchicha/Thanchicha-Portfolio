@@ -46,6 +46,9 @@ export default function Hero() {
 
       {/* Main Content Area - taking full height minus navbar (approx) and marquee */}
       <div className="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-20 relative z-10 flex flex-col flex-grow justify-center pb-12 pt-24 lg:pt-16">
+        <div aria-label="Optional portrait area" className="pointer-events-none absolute right-8 top-32 hidden h-44 w-44 rounded-full border border-[#9D85FF]/40 bg-gradient-to-br from-[#9D85FF]/10 to-[#EC4899]/10 p-3 lg:block">
+          <div className="flex h-full items-center justify-center rounded-full border border-dashed border-[#EC4899]/40 font-mono text-[10px] uppercase tracking-widest text-text-muted">Portrait optional</div>
+        </div>
         <motion.div 
           variants={containerVariants}
           initial="hidden"

@@ -51,7 +51,7 @@ export default function Timeline() {
       <div className="max-w-[1400px] mx-auto">
         <div className="flex items-center gap-4 mb-20">
           <div className="font-mono text-[#6366F1] font-bold text-sm tracking-widest uppercase shrink-0">
-            // 06 <span className="text-text-muted font-normal ml-2">EXPERIENCE_LOG</span>
+            // 07 <span className="text-text-muted font-normal ml-2">EXPERIENCE_LOG</span>
           </div>
           <div className="h-px flex-grow bg-gray-200 dark:bg-gray-800"></div>
         </div>

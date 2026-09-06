@@ -86,7 +86,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24 px-6 border-t border-gray-200 dark:border-gray-800">
       <div className="max-w-[1400px] mx-auto">
-        <div className="section-header mb-8">04 CAPABILITY_MATRIX</div>
+        <div className="section-header mb-8">06 CAPABILITY_MATRIX</div>
         <p className="text-text-secondary text-base mb-12 max-w-2xl">
           Four connected capability areas, grounded in how I approach product and business problems. Select a skill to see the current evidence.
         </p>

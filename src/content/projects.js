@@ -125,10 +125,26 @@ const supportingProjects = [
   },
 ];
 
+const projectContexts = [
+  {
+    title: 'Hackathon & Competition',
+    description: 'Time-bound team challenges where I practiced research, prototyping, communication, and delivery under constraints.',
+    projects: [
+      projects.find((project) => project.slug === 'cp-axtra'),
+      ...supportingProjects,
+    ],
+  },
+  {
+    title: 'Individual Project',
+    description: 'Self-directed experiments used to explore new tools and turn a personal question into a working prototype.',
+    projects: [projects.find((project) => project.slug === 'ai-investment-news-automation')],
+  },
+].filter((context) => context.projects.every(Boolean));
+
 const featuredProjects = projects.slice(0, 4);
 
 function getProjectBySlug(slug) {
   return [...projects, ...supportingProjects].find((project) => project.slug === slug);
 }
 
-export { projects, featuredProjects, supportingProjects, getProjectBySlug };
+export { projects, featuredProjects, supportingProjects, projectContexts, getProjectBySlug };

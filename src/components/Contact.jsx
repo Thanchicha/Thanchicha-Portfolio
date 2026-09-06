@@ -56,13 +56,6 @@ export default function Contact() {
 
       <div className="max-w-[1400px] mx-auto relative z-10">
         
-        <div className="flex items-center gap-4 mb-32 md:mb-40">
-          <div className="font-mono text-[#6366F1] font-bold text-sm tracking-widest uppercase shrink-0">
-            // 07 <span className="text-text-muted font-normal ml-2">CONTACT</span>
-          </div>
-          <div className="h-px flex-grow bg-gray-200 dark:bg-gray-800"></div>
-        </div>
-        
         <motion.div 
           variants={containerVariants}
           initial="hidden"

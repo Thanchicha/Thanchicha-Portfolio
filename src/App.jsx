@@ -1,13 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Route, Routes, useParams } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Process from './components/Process';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Timeline from './components/Timeline';
-import Contact from './components/Contact';
+import HomePage from './pages/HomePage';
 
 function PortfolioShell({ children }) {
   const [isDark, setIsDark] = useState(() => {
@@ -42,23 +36,6 @@ function PortfolioShell({ children }) {
         </div>
       </footer>
     </div>
-  );
-}
-
-function HomePage() {
-  return (
-    <main>
-      <h1 className="sr-only">
-        I turn user and business problems into product decisions and working solutions.
-      </h1>
-      <Hero />
-      <About />
-      <Process />
-      <Skills />
-      <Projects />
-      <Timeline />
-      <Contact />
-    </main>
   );
 }
 

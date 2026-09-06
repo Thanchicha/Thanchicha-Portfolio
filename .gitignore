@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 .worktrees/
+.superpowers/
+.tmp-resume-render/
+.tmp-content-master-render/
 
 # Editor directories and files
 .vscode/*

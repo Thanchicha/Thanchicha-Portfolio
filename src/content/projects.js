@@ -27,7 +27,7 @@ const projects = [
       },
     ],
     evidenceNeeded: ['Link to the current MVP or demo', 'Selected research notes and prototype screens'],
-    limitations: ['Early-stage MVP; no product-market-fit or revenue claim is made.'],
+    limitations: ['Early-stage MVP; this page focuses on validation evidence rather than outcome claims.'],
     tags: ['Product discovery', 'User research', 'Business strategy', 'MVP testing'],
   },
   {

@@ -1,8 +1,11 @@
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Navbar({ toggleTheme, isDark }) {
+  const { pathname } = useLocation();
+  const sectionHref = (id) => pathname === '/' ? `#${id}` : `/#${id}`;
   const [time, setTime] = useState("");
   const { scrollYProgress } = useScroll();
   const [scrollPercent, setScrollPercent] = useState(0);
@@ -44,23 +47,23 @@ export default function Navbar({ toggleTheme, isDark }) {
         <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20 py-4 flex justify-between items-center gap-4">
           
           {/* Logo Section */}
-          <div className="flex items-center text-text-primary font-bold tracking-widest whitespace-nowrap">
+          <Link to="/" className="flex items-center text-text-primary font-bold tracking-widest whitespace-nowrap">
             <span className="text-primary mr-2">&gt;_</span> 
             <span>[TH]</span> 
             <span className="text-text-muted mx-2">/</span> 
             <span className="text-text-secondary hidden sm:inline">PORTFOLIO_v2.0</span>
             <span className="text-text-secondary sm:hidden">PTF_v2.0</span>
-          </div>
+          </Link>
           
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex justify-center items-center gap-6 xl:gap-8 font-semibold uppercase tracking-widest text-text-muted">
-            <a href="#hero" className="hover:text-primary transition-colors">Overview</a>
-            <a href="#about" className="hover:text-primary transition-colors">About</a>
-            <a href="#process" className="hover:text-primary transition-colors">Process</a>
-            <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
-            <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
-            <a href="#timeline" className="hover:text-primary transition-colors">Timeline</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+            <a href={sectionHref('hero')} className="hover:text-primary transition-colors">Overview</a>
+            <a href={sectionHref('about')} className="hover:text-primary transition-colors">About</a>
+            <a href={sectionHref('process')} className="hover:text-primary transition-colors">Process</a>
+            <a href={sectionHref('skills')} className="hover:text-primary transition-colors">Skills</a>
+            <Link to="/work" className="hover:text-primary transition-colors">Work</Link>
+            <a href={sectionHref('timeline')} className="hover:text-primary transition-colors">Timeline</a>
+            <a href={sectionHref('contact')} className="hover:text-primary transition-colors">Contact</a>
           </div>
 
           {/* Right Section: Info & Controls */}
@@ -102,13 +105,13 @@ export default function Navbar({ toggleTheme, isDark }) {
               className="lg:hidden border-t border-gray-200 dark:border-gray-800 bg-bg-main overflow-hidden shadow-xl"
             >
               <div className="flex flex-col py-6 px-6 gap-4 font-semibold uppercase tracking-widest text-text-muted text-sm text-center">
-                <a href="#hero" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Overview</a>
-                <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">About</a>
-                <a href="#process" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Process</a>
-                <a href="#skills" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Skills</a>
-                <a href="#projects" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Projects</a>
-                <a href="#timeline" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Timeline</a>
-                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Contact</a>
+                <a href={sectionHref('hero')} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Overview</a>
+                <a href={sectionHref('about')} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">About</a>
+                <a href={sectionHref('process')} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Process</a>
+                <a href={sectionHref('skills')} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Skills</a>
+                <Link to="/work" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Work</Link>
+                <a href={sectionHref('timeline')} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Timeline</a>
+                <a href={sectionHref('contact')} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Contact</a>
                 
                 {/* Mobile time & scroll info */}
                 <div className="flex flex-col items-center gap-2 mt-4 pt-6 border-t border-gray-200 dark:border-gray-800 text-text-secondary text-xs">

@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Route, Routes, useParams } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
+import WorkIndexPage from './pages/WorkIndexPage';
+import CaseStudyPage from './pages/CaseStudyPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 function PortfolioShell({ children }) {
   const [isDark, setIsDark] = useState(() => {
@@ -36,33 +39,6 @@ function PortfolioShell({ children }) {
         </div>
       </footer>
     </div>
-  );
-}
-
-function WorkIndexPage() {
-  return (
-    <main className="min-h-screen px-6 pt-36 md:px-12 lg:px-20">
-      <h1 className="text-4xl font-bold text-text-primary">Selected Work</h1>
-    </main>
-  );
-}
-
-function CaseStudyPage() {
-  const { slug } = useParams();
-  const title = slug === 'cosaki' ? 'Cosaki Case Study' : 'Project Case Study';
-
-  return (
-    <main className="min-h-screen px-6 pt-36 md:px-12 lg:px-20">
-      <h1 className="text-4xl font-bold text-text-primary">{title}</h1>
-    </main>
-  );
-}
-
-function NotFoundPage() {
-  return (
-    <main className="min-h-screen px-6 pt-36 md:px-12 lg:px-20">
-      <h1 className="text-4xl font-bold text-text-primary">Page not found</h1>
-    </main>
   );
 }
 

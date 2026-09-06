@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Process from './components/Process';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Timeline from './components/Timeline';
-import Contact from './components/Contact';
+import HomePage from './pages/HomePage';
+import WorkIndexPage from './pages/WorkIndexPage';
+import CaseStudyPage from './pages/CaseStudyPage';
+import NotFoundPage from './pages/NotFoundPage';
 
-function App() {
+function PortfolioShell({ children }) {
   const [isDark, setIsDark] = useState(() => {
     const saved = localStorage.getItem('theme');
     if (saved !== null) {
@@ -33,15 +31,7 @@ function App() {
   return (
     <div className="min-h-screen transition-colors duration-300">
       <Navbar toggleTheme={toggleTheme} isDark={isDark} />
-      <main>
-        <Hero />
-        <About />
-        <Process />
-        <Skills />
-        <Projects />
-        <Timeline />
-        <Contact />
-      </main>
+      {children}
       <footer className="pb-12 pt-4 px-6 text-gray-500 dark:text-gray-400 text-[11px] md:text-xs font-mono font-semibold bg-bg-main">
         <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 border-t border-gray-200 dark:border-gray-800 pt-8">
           <div>© 2026 Thanchicha Hempichit. All rights reserved.</div>
@@ -49,6 +39,19 @@ function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <PortfolioShell>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/work" element={<WorkIndexPage />} />
+        <Route path="/work/:slug" element={<CaseStudyPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </PortfolioShell>
   );
 }
 

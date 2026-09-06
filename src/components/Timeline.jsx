@@ -7,42 +7,42 @@ export default function Timeline() {
       badge: "Internship",
       title: "Software Developer Intern — SmartProcure (Coral Supply)",
       subtitle: "Coral Supply × NIA Innovator Journey Program",
-      desc: "Selected for the NIA 'Innovator Journey' Program. Acting as Technical System Analyst & Frontend Engineer to build SmartProcure, a B2B automated procurement feature using Vanilla JS, targeting food waste elimination across hospitality clients."
+      desc: "Selected for the NIA 'Innovator Journey' Program. Worked on SmartProcure by translating workflow needs into structured requirements, AI-assisted JSON experiments, QA notes, and clearer user journeys."
     },
     {
       year: "2026",
       badge: "Venture",
       title: "Co-Founder & Product Lead — Cosaki",
       subtitle: "SIT Innoventure",
-      desc: "Co-founded a peer-to-peer cosplay rental marketplace. Led business analysis, revenue engineering, e-KYC system design, and advanced filter search architecture. Currently in MVP Build & Delivery stage."
+      desc: "Co-founded a cosplay rental startup with one development co-founder. Led problem framing, user discovery, partner conversations, prioritization, and business direction while the MVP was tested with early users."
     },
     {
       year: "2026",
       badge: "Award",
       title: "Honorable Mention — Paw Guardian",
       subtitle: "NTU Hackathon 2026",
-      desc: "Designed an empathetic IoT rehabilitation ecosystem for stroke patients. Led inclusive UX/UI design, Unity C# prototyping, and delivered a high-impact technical pitch winning Honorable Mention."
+      desc: "A concept project exploring an empathetic digital and IoT rehabilitation experience. Contributed to inclusive UX thinking, prototyping, and communicating the solution through a technical pitch."
     },
     {
       year: "2025",
       badge: "Award",
       title: "1st Place & Popular Vote — Faculty Room Booking",
       subtitle: "SIT Hello World Hippo 2025",
-      desc: "Frontend Developer in a multidisciplinary 7-day hackathon. Built pixel-perfect React + Tailwind UI components and bridged Figma designs to backend APIs. Won 1st Place among multiple competing teams."
+      desc: "Frontend contributor in a multidisciplinary hackathon. Helped translate product and design direction into a working booking experience and collaborated across the team under a fixed timeline."
     },
     {
       year: "2025",
       badge: "Award",
       title: "Top 10 Finalists — Makro Pro AI Food Preservation",
       subtitle: "CP Axtra Mile Hackathon 2025 (Team: D-SY)",
-      desc: "Team Leader & Data Analyst. Led on-site ethnographic research, financial ROI modeling, and a corporate pitch to executive judges. Selected Top 10 Finalists in corporate retail innovation competition."
+      desc: "Led research and synthesis for a retail innovation challenge using 12 interviews, 44 survey responses, and onsite observation. The team was selected in the Top 10 of 113 teams."
     },
     {
       year: "2025",
       badge: "Hackathon",
       title: "Frontend Developer — Sun-Sola",
       subtitle: "SIT Hackathon 2025",
-      desc: "Technical System Analyst & Frontend Engineer. Built a full-stack marketplace prototype in 96 hours, self-teaching Node.js & MySQL on-the-fly to save the project timeline when integration blocks emerged."
+      desc: "Contributed to a marketplace concept in a 96-hour hackathon, learning unfamiliar tools while communicating system flows and helping the team work through integration constraints."
     }
   ];
 

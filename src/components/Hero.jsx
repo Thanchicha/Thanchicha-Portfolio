@@ -89,7 +89,7 @@ export default function Hero() {
           {/* Description and CTA */}
           <motion.div variants={itemVariants} className="max-w-3xl lg:w-1/2 mt-6 relative flex flex-col items-start gap-8">
             <p className="text-[15px] sm:text-base lg:text-[19px] text-gray-400 dark:text-gray-300 leading-relaxed font-medium">
-              I turn ambiguous business and user problems into structured requirements, data-informed decisions, and practical digital solutions—working comfortably across business and technical teams.
+              Digital Service Innovation student focused on product management, product strategy, and the bridge between business and technology. I work across discovery, requirements, prototyping, AI integration, and cross-functional delivery.
             </p>
             
             <a href="#projects" className="bg-gradient-to-r from-[#9D85FF] to-[#FFA3B5] text-[#0B0A0F] font-bold px-8 py-3.5 rounded-full hover:opacity-90 transition-all duration-300 shadow-glow inline-flex items-center justify-center gap-2 group text-sm md:text-base">

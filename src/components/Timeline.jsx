@@ -3,46 +3,46 @@ import { motion } from 'framer-motion';
 export default function Timeline() {
   const experiences = [
     {
-      year: "2026",
+      year: "Jun–Aug 2026",
       badge: "Internship",
-      title: "Software Developer Intern — SmartProcure (Coral Supply)",
-      subtitle: "Coral Supply × NIA Innovator Journey Program",
+      title: "Pakarang Supply — Software Developer Intern, SmartProcure",
+      subtitle: "NIA Innovator Journey Program · Training Apr–May 2026 · Internship Jun–Aug 2026",
       desc: "Selected for the NIA 'Innovator Journey' Program. Worked on SmartProcure by translating workflow needs into structured requirements, AI-assisted JSON experiments, QA notes, and clearer user journeys."
     },
     {
-      year: "2026",
-      badge: "Venture",
-      title: "Co-Founder & Product Lead — Cosaki",
-      subtitle: "SIT Innoventure",
+      year: "May–Aug 2026",
+      badge: "Startup",
+      title: "Co-Founder & Business Lead — Cosaki",
+      subtitle: "SIT Innoventure · Startup continues",
       desc: "Co-founded a cosplay rental startup with one development co-founder. Led problem framing, user discovery, partner conversations, prioritization, and business direction while the MVP was tested with early users."
     },
     {
       year: "2026",
       badge: "Award",
-      title: "Honorable Mention — Paw Guardian",
-      subtitle: "NTU Hackathon 2026",
+      title: "NTU Hackathon 2026",
+      subtitle: "Honorable Mention — Paw Guardian",
       desc: "A concept project exploring an empathetic digital and IoT rehabilitation experience. Contributed to inclusive UX thinking, prototyping, and communicating the solution through a technical pitch."
     },
     {
-      year: "2025",
-      badge: "Award",
-      title: "1st Place & Popular Vote — Faculty Room Booking",
-      subtitle: "SIT Hello World Hippo 2025",
-      desc: "Frontend contributor in a multidisciplinary hackathon. Helped translate product and design direction into a working booking experience and collaborated across the team under a fixed timeline."
+      year: "Jul–Aug 2025",
+      badge: "Competition",
+      title: "CP Axtra Mile Hackathon 2025",
+      subtitle: "Team D-SY · Top 10 of 113 teams",
+      desc: "Led research and synthesis using 12 interviews, 44 survey responses, and onsite observation to refine a retail innovation opportunity."
     },
     {
-      year: "2025",
-      badge: "Award",
-      title: "Top 10 Finalists — Makro Pro AI Food Preservation",
-      subtitle: "CP Axtra Mile Hackathon 2025 (Team: D-SY)",
-      desc: "Led research and synthesis for a retail innovation challenge using 12 interviews, 44 survey responses, and onsite observation. The team was selected in the Top 10 of 113 teams."
-    },
-    {
-      year: "2025",
+      year: "Apr 2025",
       badge: "Hackathon",
-      title: "Frontend Developer — Sun-Sola",
-      subtitle: "SIT Hackathon 2025",
-      desc: "Contributed to a marketplace concept in a 96-hour hackathon, learning unfamiliar tools while communicating system flows and helping the team work through integration constraints."
+      title: "SIT Hackathon 2025",
+      subtitle: "4-day hackathon",
+      desc: "Contributed to a time-bound marketplace concept, communicating system flows and helping the team work through integration constraints."
+    },
+    {
+      year: "Jan–Feb 2025",
+      badge: "Bootcamp + Hackathon",
+      title: "SIT Hello World Hippo 2025",
+      subtitle: "Bootcamp and Hackathon",
+      desc: "Frontend contributor in a multidisciplinary team, helping translate product and design direction into a working booking experience under a fixed timeline."
     }
   ];
 

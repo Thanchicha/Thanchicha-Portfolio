@@ -7,3 +7,9 @@ test('keeps the About statement readable at a controlled width', () => {
   expect(statement).toHaveClass('max-w-3xl');
   expect(statement).toHaveClass('leading-[1.28]');
 });
+
+test('shows the academic excellence scholarship recognition', () => {
+  render(<About />);
+  expect(screen.getByText('Academic Excellence Scholarship — SIT, KMUTT')).toBeInTheDocument();
+  expect(screen.getByText(/Awarded in 2025 and 2026 in recognition of academic performance/i)).toBeInTheDocument();
+});

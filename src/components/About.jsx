@@ -86,6 +86,12 @@ export default function About() {
               <div className="text-text-muted">
                 2024 — Present <span className="opacity-70 ml-2">(Expected Graduation: 2028)</span>
               </div>
+
+              <div className="mt-7 rounded-xl border border-[#9D85FF]/30 bg-[#9D85FF]/5 p-4">
+                <div className="font-mono text-[10px] uppercase tracking-widest text-[#8b5cf6]">Recognition</div>
+                <h4 className="mt-2 text-sm font-bold text-text-primary">Academic Excellence Scholarship — SIT, KMUTT</h4>
+                <p className="mt-1 text-xs leading-relaxed text-text-secondary">Awarded in 2025 and 2026 in recognition of academic performance.</p>
+              </div>
             </div>
           </motion.div>
 

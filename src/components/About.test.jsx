@@ -5,7 +5,8 @@ test('keeps the About statement readable at a controlled width', () => {
   render(<About />);
   const statement = screen.getByRole('heading', { level: 2 });
   expect(statement).toHaveClass('max-w-3xl');
-  expect(statement).toHaveClass('leading-[1.28]');
+  expect(statement).toHaveClass('leading-[1.5]');
+  expect(statement).toHaveClass('tracking-[0.01em]');
 });
 
 test('shows the academic excellence scholarship recognition', () => {

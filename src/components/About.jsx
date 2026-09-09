@@ -37,7 +37,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
           className="mb-20 max-w-3xl"
         >
-          <h2 className="max-w-3xl text-xl md:text-2xl lg:text-3xl text-text-primary leading-[1.28] font-normal tracking-tight">
+          <h2 className="max-w-3xl text-xl md:text-2xl lg:text-3xl text-text-primary leading-[1.5] font-normal tracking-[0.01em]">
             I work at the intersection of business, users, data, and technology. I enjoy turning complex problems into clear product direction, aligning people around practical decisions, and helping teams move from an idea to a solution that creates measurable value.
           </h2>
         </motion.div>

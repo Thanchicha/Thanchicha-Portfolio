@@ -60,12 +60,9 @@ export default function Timeline() {
         </div>
 
         <div className="max-w-4xl ml-2 md:ml-12 relative">
-          {/* Vertical Line */}
-          <div className="absolute left-[7px] top-2 bottom-2 w-[2px] bg-gray-100 dark:bg-gray-800/60 rounded-full"></div>
-
           <div>
             <h2 className="mb-8 text-2xl font-bold text-text-primary">Currently in progress</h2>
-            <div className="space-y-16">
+            <div className="relative space-y-16 before:absolute before:bottom-2 before:left-[7px] before:top-2 before:w-[2px] before:rounded-full before:bg-gray-100 dark:before:bg-gray-800/60">
             {ongoingExperiences.map((exp, idx) => (
               <motion.div 
                 key={`ongoing-${idx}`}
@@ -100,7 +97,7 @@ export default function Timeline() {
             ))}
             </div>
             <h2 className="mb-8 mt-20 text-2xl font-bold text-text-primary">Completed experience</h2>
-            <div className="space-y-16">
+            <div className="relative space-y-16 before:absolute before:bottom-2 before:left-[7px] before:top-2 before:w-[2px] before:rounded-full before:bg-gray-100 dark:before:bg-gray-800/60">
             {completedExperiences.map((exp, idx) => (
               <motion.div 
                 key={`completed-${idx}`}
@@ -116,7 +113,8 @@ export default function Timeline() {
                 <div className="text-[#8b5cf6] dark:text-[#818cf8] text-sm font-medium mb-4">{exp.subtitle}</div>
                 <p className="text-text-secondary leading-relaxed text-sm max-w-3xl">{exp.desc}</p>
               </motion.div>
-            ))}+            </div>
+            ))}
+            </div>
           </div>
         </div>
       </div>

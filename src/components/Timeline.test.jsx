@@ -7,3 +7,11 @@ test('shows the verified training, internship, and startup timeline ranges', () 
   expect(screen.getByText('May–Aug 2026')).toBeInTheDocument();
   expect(screen.getByText(/SIT Innoventure · Startup continues/i)).toBeInTheDocument();
 });
+
+test('separates ongoing work from completed experience', () => {
+  render(<Timeline />);
+  expect(screen.getByRole('heading', { name: 'Currently in progress' })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'Completed experience' })).toBeInTheDocument();
+  expect(screen.getByText('May–Aug 2026')).toBeInTheDocument();
+  expect(screen.getByText('Jun–Aug 2026')).toBeInTheDocument();
+});

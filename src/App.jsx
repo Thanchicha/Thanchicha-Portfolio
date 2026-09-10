@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import WorkIndexPage from './pages/WorkIndexPage';
 import CaseStudyPage from './pages/CaseStudyPage';
+import CertificatesPage from './pages/CertificatesPage';
 import NotFoundPage from './pages/NotFoundPage';
 import { pageMetadata } from './lib/metadata';
 
@@ -60,6 +61,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/work" element={<WorkIndexPage />} />
         <Route path="/work/:slug" element={<CaseStudyPage />} />
+        <Route path="/certificates" element={<CertificatesPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </PortfolioShell>

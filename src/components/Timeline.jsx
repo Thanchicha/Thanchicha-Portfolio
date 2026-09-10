@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function Timeline() {
   const ongoingExperiences = [
     {
-      year: "May–Aug 2026",
+      year: "May 2026",
       badge: "Startup",
       title: "Co-Founder & Business Lead — Cosaki",
       subtitle: "SIT Innoventure · Startup continues",

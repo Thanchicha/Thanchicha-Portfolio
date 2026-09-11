@@ -44,3 +44,10 @@ test('searches within the active role lens and offers reset for no results', () 
   expect(screen.getByText(/No projects match/i)).toBeInTheDocument();
   expect(screen.getByRole('button', { name: 'Reset explorer' })).toBeInTheDocument();
 });
+
+test('shows skill names without hashtag symbols', () => {
+  render(<MemoryRouter initialEntries={['/work']}><WorkIndexPage /></MemoryRouter>);
+
+  expect(screen.queryByText('#React', { exact: true })).not.toBeInTheDocument();
+  expect(screen.getAllByText('React', { exact: true }).length).toBeGreaterThan(0);
+});

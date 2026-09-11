@@ -14,7 +14,7 @@ function SkillGroup({ label, skills }) {
             aria-label={`View projects using ${skill}`}
             className="inline-flex min-h-11 items-center rounded-full border border-[#c7d2fe] bg-white px-4 py-2 text-sm font-medium text-text-primary transition-colors hover:border-[#6366F1] hover:bg-[#eef2ff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6366F1] dark:border-[#3c3a5e] dark:bg-[#110f17] dark:hover:bg-[#211d35]"
           >
-            #{skill}
+            {skill}
           </Link>
         ))}
       </div>

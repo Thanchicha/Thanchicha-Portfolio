@@ -45,7 +45,7 @@ export default function WorkExplorerControls({
         </div>
       </div>
 
-      {hasActiveFilters && <div className="mt-5 flex flex-wrap items-center gap-2 text-sm text-text-secondary"><span>Viewing {activeRoleLabel}</span>{activeSkill && <button type="button" aria-label={`Clear ${activeSkill} filter`} onClick={onClearSkill} className="inline-flex min-h-9 items-center gap-1 rounded-full bg-[#eef2ff] px-3 font-medium text-[#4338ca] hover:bg-[#e0e7ff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6366F1]">#{activeSkill}<X aria-hidden="true" className="size-3.5" /></button>}<button type="button" onClick={onReset} className="min-h-9 px-2 font-medium text-[#6366F1] underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6366F1]">Reset explorer</button></div>}
+      {hasActiveFilters && <div className="mt-5 flex flex-wrap items-center gap-2 text-sm text-text-secondary"><span>Viewing {activeRoleLabel}</span>{activeSkill && <button type="button" aria-label={`Clear ${activeSkill} filter`} onClick={onClearSkill} className="inline-flex min-h-9 items-center gap-1 rounded-full bg-[#eef2ff] px-3 font-medium text-[#4338ca] hover:bg-[#e0e7ff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6366F1]">{activeSkill}<X aria-hidden="true" className="size-3.5" /></button>}<button type="button" onClick={onReset} className="min-h-9 px-2 font-medium text-[#6366F1] underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6366F1]">Reset explorer</button></div>}
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import WorkIndexPage from './WorkIndexPage';
 
@@ -13,11 +13,13 @@ test('links HIPPO from a standard work card without featured treatment', () => {
 test('filters work by a clickable skill hashtag', () => {
   render(<MemoryRouter initialEntries={['/work']}><WorkIndexPage /></MemoryRouter>);
 
-  fireEvent.click(screen.getByRole('button', { name: 'Filter by React' }));
+  const hippoCard = screen.getByRole('heading', { name: 'Hello World HIPPO Hackathon 2025' }).closest('article');
+  fireEvent.click(within(hippoCard).getByRole('button', { name: 'Filter by React' }));
 
   expect(screen.getByRole('heading', { name: 'Hello World HIPPO Hackathon 2025' })).toBeInTheDocument();
   expect(screen.queryByRole('heading', { name: 'Cosaki' })).not.toBeInTheDocument();
-  expect(screen.getByText('1 project for Product Manager')).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'SUN SOLA' })).toBeInTheDocument();
+  expect(screen.getByText('2 projects for Product Manager')).toBeInTheDocument();
 });
 
 test('defaults to Product Manager and shows its primary work first', () => {

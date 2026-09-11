@@ -39,3 +39,24 @@ test('maps project relevance to the target roles', () => {
   expect(cosaki.roleFocus['product-manager']).toBe('primary');
   expect(hippo.roleFocus['system-analyst']).toBe('primary');
 });
+
+test('adds Sun Sola as a full-stack case study with transparent evidence placeholders', () => {
+  const sunSola = getProjectBySlug('sun-sola');
+
+  expect(sunSola).toMatchObject({
+    title: 'SUN SOLA',
+    role: 'Front-end Developer · Cross-functional Contributor',
+  });
+  expect(sunSola.facts).toEqual(expect.arrayContaining([
+    { label: 'Team', value: '3 cross-functional members' },
+    { label: 'Build period', value: '4-day hackathon + 7-day improvement period' },
+  ]));
+  expect(sunSola.featureList).toEqual(expect.arrayContaining([
+    expect.objectContaining({ title: 'Seller shop management' }),
+    expect.objectContaining({ title: 'Customer reviews' }),
+  ]));
+  expect(sunSola.media).toEqual(expect.arrayContaining([
+    expect.objectContaining({ label: 'Database ERD', status: 'Asset to add' }),
+    expect.objectContaining({ label: 'Business plan / pitch deck', status: 'Asset to add' }),
+  ]));
+});

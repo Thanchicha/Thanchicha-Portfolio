@@ -81,3 +81,23 @@ test('adds the park safety project with user-validation results and media placeh
     expect.objectContaining({ label: 'Testing results comparison', status: 'Asset to add' }),
   ]));
 });
+
+test('expands CP Axtra with Smart Adviser leadership, research, and estimate-aware evidence', () => {
+  const cpAxtra = getProjectBySlug('cp-axtra');
+
+  expect(cpAxtra).toMatchObject({
+    title: 'AXTRA MILE Hackathon 2025 — Smart Adviser',
+    role: 'Team Lead · Product / Business Analyst · Research · Data Support',
+  });
+  expect(cpAxtra.facts).toEqual(expect.arrayContaining([
+    { label: 'Team', value: '5 members' },
+    { label: 'Achievement', value: 'Top 20 Workshop Participant → Top 10 Finalist' },
+  ]));
+  expect(cpAxtra.media).toEqual(expect.arrayContaining([
+    expect.objectContaining({ label: 'Makro pitch deck', status: 'Asset to add' }),
+    expect.objectContaining({ label: 'Impact and financial model', status: 'Asset to add' }),
+  ]));
+  expect(cpAxtra.limitations).toEqual(expect.arrayContaining([
+    expect.stringMatching(/estimated/i),
+  ]));
+});

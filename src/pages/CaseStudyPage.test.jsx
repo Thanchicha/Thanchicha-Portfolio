@@ -70,3 +70,17 @@ test('renders the park safety project with Design Thinking and validation eviden
   expect(screen.getByText('Testing results comparison')).toBeInTheDocument();
   expect(screen.getByText('Skills developed')).toBeInTheDocument();
 });
+
+test('renders Smart Adviser with operational constraints and estimate-aware planning', () => {
+  render(
+    <MemoryRouter initialEntries={['/work/cp-axtra']}>
+      <Routes><Route path="/work/:slug" element={<CaseStudyPage />} /></Routes>
+    </MemoryRouter>,
+  );
+
+  expect(screen.getByRole('heading', { name: 'AXTRA MILE Hackathon 2025 — Smart Adviser' })).toBeInTheDocument();
+  expect(screen.getByText('Field research and operational reality')).toBeInTheDocument();
+  expect(screen.getByText('Impact assumptions, not results')).toBeInTheDocument();
+  expect(screen.getByText('Makro pitch deck')).toBeInTheDocument();
+  expect(screen.getByText('Skills developed')).toBeInTheDocument();
+});

@@ -87,8 +87,8 @@ const projects = [
     role: 'Team Lead · Product / Business Analyst · Research · Data Support',
     date: 'Jun–Aug 2025',
     award: 'Top 20 Workshop Participant → Top 10 Finalist',
-    headline: 'An AI-powered concept to reduce food waste while improving engagement and sales through Makro Pro.',
-    summary: 'A five-person CP AXTRA hackathon team developed Smart Adviser: an expiry-management and personalized-promotion concept grounded in customer research, field observation, and operational constraints.',
+    headline: 'An AI-powered concept for Makro Pro designed to reduce food waste while improving customer engagement and sales.',
+    summary: 'Smart Adviser connects expiry management, personalized recommendations, and targeted promotions through customer research, field observation, and business constraints.',
     facts: [
       { label: 'Role', value: 'Team Lead · Product / Business Analyst · Research · Data Support' },
       { label: 'Team', value: '5 members' },
@@ -98,20 +98,20 @@ const projects = [
     ],
     sections: [
       {
-        heading: 'The business and customer problem',
-        body: 'The competition asked how technology and AI could create opportunities for CP AXTRA’s retail, wholesale, and service businesses. We focused on food waste around fresh and near-expiry products. The pitch deck cited approximately 24,400 tons of Makro food waste in 2024. In our survey of 44 Makro and Lotus’s customers, 93.2% reported throwing food away because it expired, while only 11.3% strongly prioritized tracking expiry dates.',
+        heading: 'The challenge',
+        body: 'We explored how technology and AI could create new opportunities for CP AXTRA’s retail and wholesale businesses, focusing on food waste from fresh and near-expiry products. Among 44 Makro and Lotus’s customers surveyed, 93.2% had thrown food away because it expired, while only 11.3% strongly prioritized tracking expiry dates. Field observation at Makro Bangna also showed that a desirable customer experience must work within real operational, logistics, system, cost, and brand constraints.',
       },
       {
-        heading: 'Field research and operational reality',
-        body: 'At Makro Bangna, we observed parts of the online-order process and learned how store and digital operations interact. This changed our early ideas: a solution can be desirable for customers yet difficult in practice because of operations, logistics, brand positioning, internal systems, and development cost. Mentors challenged us to account for those constraints instead of treating the app as an isolated interface.',
+        heading: 'My contribution',
+        body: 'As Team Lead and Product / Business Analyst, I coordinated work across five teammates and managed internal deadlines. I helped frame the customer and business problem; supported surveys, interviews, desk research, and field research; synthesized findings into product opportunities; contributed to impact assumptions, implementation planning, and roadmap; and aligned research, product thinking, and pitch contributions into one coherent narrative.',
       },
       {
-        heading: 'The solution: Smart Adviser',
-        body: 'Smart Adviser was designed as an additional Makro Pro feature with two connected directions. For customers, it helps them track products approaching expiry dates, log use, earn Makro Points, receive preservation recommendations, and get menu ideas. For the business, it proposes earlier, customer-specific promotions for products at higher risk of remaining unsold—rather than waiting until they become yellow-tag items.',
+        heading: 'From research to product decisions',
+        body: 'Customers frequently waste expired food, so we designed proactive expiry tracking and reminders. Customers also need ideas for using food before it expires, leading to AI-powered menu and preservation recommendations. Near-expiry products create waste and commercial risk, so we explored earlier customer-specific promotions rather than relying only on late-stage yellow-tag discounts. Because store and digital operations create real constraints, we positioned Smart Adviser as an extension of Makro Pro rather than an isolated product.',
       },
       {
-        heading: 'AI as a decision-support concept',
-        body: 'We treated AI as a means to improve specific decisions, not as a generic feature. The concept used customer behavior to support product recommendations, targeted notifications for customers more likely to purchase, and additional product-usage data to improve forecasting. The key questions became: what data is needed, what decision improves, and how does that create value for both the user and the business?',
+        heading: 'AI as decision support',
+        body: 'Rather than adding AI as a standalone feature, we asked: what data is available, what decision can improve, and how does that create value? The concept explored AI for product recommendations, customer targeting, notification relevance, and additional usage signals that could support better forecasting over time.',
       },
     ],
     featureList: [
@@ -122,16 +122,16 @@ const projects = [
     ],
     reflection: [
       {
-        heading: 'Leading the team under a competition deadline',
-        body: 'As Team Lead, I divided work, set internal deadlines, tracked progress, scheduled discussions, and built buffer time when tasks slipped. I also helped align separate research, solution, and pitch contributions into one shared story. This was one of my first experiences coordinating a team for an external corporate competition.',
+        heading: 'Business & implementation thinking',
+        body: 'The final proposal included an approximately eight-month implementation roadmap, resource requirements, and models covering promotion, repeat purchase, cross-sell, forecasting, and food-waste reduction. These figures were planning assumptions used to test the business case—not validated production results or guarantees.',
       },
       {
-        heading: 'Impact assumptions, not results',
-        body: 'Our pitch included an approximately eight-month implementation roadmap, resource requirements, and models for promotion, repeat purchase, cross-sell, forecasting, and food-waste reduction. These were proposed assumptions to make the business case measurable—not validated production outcomes or guarantees.',
+        heading: 'Outcome',
+        body: 'Our team advanced from the Top 20 workshop stage to the Top 10 finalists. We conducted customer research and Makro Bangna field observation, then developed a product concept connecting customer needs, AI, operations, business impact, and implementation planning.',
       },
       {
         heading: 'What I learned',
-        body: 'AXTRA MILE connected user need, business problem, operational reality, data, AI, financial impact, and implementation planning in one project. I learned to treat interviews as conversations, seek extreme users for deeper insight, listen for unexpected details, and refine ideas inside real constraints rather than ideal conditions.',
+        body: 'This project taught me that product decisions cannot be based on customer desirability alone. A viable solution must also account for business objectives, operational reality, available data, implementation cost, and technical constraints. I also learned to approach interviews as conversations, look for extreme users and unexpected behaviors, and refine a solution when new evidence challenges the original idea.',
       },
     ],
     media: [

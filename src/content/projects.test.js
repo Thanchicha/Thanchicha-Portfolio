@@ -31,3 +31,11 @@ test('adds HIPPO as a full case study with verified recognition and project fact
     expect.objectContaining({ label: 'Final product screens', status: 'Asset to add' }),
   ]));
 });
+
+test('maps project relevance to the target roles', () => {
+  const cosaki = getProjectBySlug('cosaki');
+  const hippo = getProjectBySlug('hello-world');
+
+  expect(cosaki.roleFocus['product-manager']).toBe('primary');
+  expect(hippo.roleFocus['system-analyst']).toBe('primary');
+});

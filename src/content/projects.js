@@ -29,6 +29,7 @@ const projects = [
     ],
     evidenceNeeded: ['Link to the current MVP or demo', 'Selected research notes and prototype screens'],
     limitations: ['Early-stage MVP; this page focuses on validation evidence rather than outcome claims.'],
+    roleFocus: { 'business-analyst': 'primary', 'data-analyst': 'supporting', 'system-analyst': 'supporting', 'product-manager': 'primary' },
     tags: ['Product discovery', 'User research', 'Business strategy', 'MVP testing'],
   },
   {
@@ -52,6 +53,7 @@ const projects = [
     ],
     evidenceNeeded: ['Approved screenshots or demo link', 'Public-safe project brief'],
     limitations: ['Prototype and internship work are presented without implying production deployment or operational impact.'],
+    roleFocus: { 'business-analyst': 'primary', 'data-analyst': 'supporting', 'system-analyst': 'primary', 'product-manager': 'primary' },
     tags: ['Requirements', 'AI prototyping', 'QA', 'Documentation'],
   },
   {
@@ -75,6 +77,7 @@ const projects = [
     ],
     evidenceNeeded: ['Repository or demo link', 'Sample output with source citations'],
     limitations: ['This is an exploratory prototype, not investment advice or a trading system.'],
+    roleFocus: { 'business-analyst': 'supporting', 'data-analyst': 'primary', 'system-analyst': 'supporting', 'product-manager': 'supporting' },
     tags: ['APIs', 'Generative AI', 'Automation', 'Data analysis'],
   },
   {
@@ -98,6 +101,7 @@ const projects = [
     ],
     evidenceNeeded: ['Research summary or presentation excerpt'],
     limitations: ['Competition concept; no claim is made about subsequent adoption or business results.'],
+    roleFocus: { 'business-analyst': 'primary', 'data-analyst': 'primary', 'system-analyst': 'supporting', 'product-manager': 'primary' },
     tags: ['User research', 'Synthesis', 'Problem framing', 'Strategy'],
   },
   {
@@ -161,6 +165,7 @@ const projects = [
       hard: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Git', 'GitHub', 'Vercel', 'Front-end Development', 'UI Implementation', 'Responsive Layout'],
       soft: ['Teamwork', 'Cross-functional Collaboration', 'Communication', 'Problem Solving', 'Adaptability', 'Time Management', 'Working Under Pressure', 'Self-directed Learning'],
     },
+    roleFocus: { 'business-analyst': 'supporting', 'data-analyst': 'supporting', 'system-analyst': 'primary', 'product-manager': 'supporting' },
     tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Git', 'GitHub', 'Vercel', 'Responsive UI implementation'],
   },
 ];
@@ -171,6 +176,7 @@ const supportingProjects = [
     title: 'Paw Guardian',
     category: 'Concept project',
     summary: 'A concept exploring how a digital service could help people care for pets with clearer information and coordination.',
+    roleFocus: { 'business-analyst': 'supporting', 'data-analyst': 'supporting', 'system-analyst': 'supporting', 'product-manager': 'supporting' },
     tags: ['Service thinking', 'Concepting'],
   },
   {
@@ -178,6 +184,7 @@ const supportingProjects = [
     title: 'Sun Sola',
     category: 'Concept project',
     summary: 'A concept project focused on communicating an everyday sustainability idea through a simple digital experience.',
+    roleFocus: { 'business-analyst': 'supporting', 'data-analyst': 'supporting', 'system-analyst': 'supporting', 'product-manager': 'supporting' },
     tags: ['Ideation', 'Storytelling'],
   },
 ];

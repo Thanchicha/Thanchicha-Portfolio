@@ -12,6 +12,7 @@ const projects = [
       '7 rental-shop partners represent 470+ costumes',
       'Top 5 of 18 teams at SIT Innoventure',
     ],
+    validationNote: 'This case study presents the work as an early validation stage, with evidence and learnings made explicit so the next product decision is easy to evaluate.',
     sections: [
       {
         heading: 'The opportunity',

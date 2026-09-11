@@ -43,7 +43,7 @@ test('places HIPPO hard and soft skills at the end of the case study', () => {
   expect(mediaHeading.compareDocumentPosition(skillsHeading) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
 });
 
-test('renders Sun Sola as a complete case study with architecture learning and media placeholders', () => {
+test('renders Sun Sola with system thinking, CRUD delivery, and focused artifacts', () => {
   render(
     <MemoryRouter initialEntries={['/work/sun-sola']}>
       <Routes><Route path="/work/:slug" element={<CaseStudyPage />} /></Routes>
@@ -51,9 +51,10 @@ test('renders Sun Sola as a complete case study with architecture learning and m
   );
 
   expect(screen.getByRole('heading', { name: 'SUN SOLA' })).toBeInTheDocument();
-  expect(screen.getByText('Understanding the data behind the interface')).toBeInTheDocument();
+  expect(screen.getByText('How the system worked')).toBeInTheDocument();
   expect(screen.getByText('From mock data to working CRUD')).toBeInTheDocument();
   expect(screen.getByText('Database ERD')).toBeInTheDocument();
+  expect(screen.getByText('GitHub / demo')).toBeInTheDocument();
   expect(screen.getByText('Skills developed')).toBeInTheDocument();
 });
 

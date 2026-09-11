@@ -299,7 +299,7 @@ const supportingProjects = [
     role: 'Front-end Developer · Cross-functional Contributor',
     date: 'Apr 2025',
     headline: 'Making solar-energy information and installation businesses easier to discover and compare.',
-    summary: 'A three-person first-year capstone built during SIT Hackathon 2025: a marketplace-style platform that helps customers explore solar information and discover installation businesses, while giving sellers a place to present their services.',
+    summary: 'A three-person first-year capstone built during SIT Hackathon 2025. SUN SOLA is a marketplace-style platform where customers can learn about solar energy, explore installation businesses and products, and review shops, while sellers can create and manage their own listings.',
     facts: [
       { label: 'Role', value: 'Front-end Developer · Cross-functional Contributor' },
       { label: 'Team', value: '3 cross-functional members' },
@@ -309,65 +309,50 @@ const supportingProjects = [
     ],
     sections: [
       {
-        heading: 'The problem',
-        body: 'People interested in solar energy can struggle to find trustworthy information and discover installation businesses. At the same time, installation companies need approachable channels to explain their services and reach potential customers.',
-      },
-      {
-        heading: 'The solution',
-        body: 'SUN SOLA was designed as a marketplace-style directory. Customers can learn about solar energy, explore businesses and products, and review shops; sellers can create a shop profile and publish their services. The product supports discovery and direct contact rather than processing the complete transaction on-platform.',
+        heading: 'The challenge',
+        body: 'People interested in solar energy can struggle to find understandable information and trustworthy installation businesses. At the same time, solar providers need an accessible way to present their services and reach potential customers. Our goal was to connect both sides through a simple discovery platform rather than build a complete transaction or payment system.',
       },
       {
         heading: 'My contribution',
-        body: 'I translated Figma designs into React and Tailwind interfaces, structured reusable components, worked with the designer on feasibility, integrated frontend pages with APIs, and helped debug the frontend–backend connection. Because the team was small, I also learned the data model, tested CRUD flows, and modified backend implementation when integration blockers affected delivery.',
+        body: 'As the frontend developer, I translated Figma designs into React and Tailwind interfaces, built reusable UI components and page flows, integrated frontend pages with REST APIs, and worked with the designer to balance design intent with implementation feasibility. I also tested CRUD flows and database-connected features, debugged frontend–backend integration issues, and modified backend logic when integration blockers affected delivery. Because the team had only three members, I learned how the database model and API layer affected the frontend instead of treating them as separate systems.',
       },
       {
-        heading: 'Understanding the data behind the interface',
-        body: 'This project changed my view from “how do I build this page?” to “where does this information come from and how is it connected?” A seller owns a shop, a shop can contain products, and customers can create reviews with images. Understanding the relationships among Sellers, Customers, Shops, Products, Reviews, and images made the UI, API requests, and database requirements easier to reason about together.',
-      },
-      {
-        heading: 'What did not work at first',
-        body: 'During the four-day hackathon, I underestimated the combined complexity of a large scope, a small team, new technology, backend integration, and a short deadline. Much of the frontend was ready, but data was not yet persisting reliably. I used temporary mock data for the presentation so the team could demonstrate the intended experience without presenting incomplete persistence as a finished system.',
+        heading: 'How the system worked',
+        body: 'React + Tailwind frontend → REST API → Node / Express backend → MySQL database. The data model connected sellers, customers, shops, products, reviews, and images. Understanding these relationships changed how I approached frontend development: instead of asking only “How should this page look?”, I began asking where the data came from, what owned it, and how the frontend read and updated it.',
       },
     ],
     featureList: [
-      { title: 'Dual user authentication', description: 'Customers and sellers register and sign in through distinct flows.' },
-      { title: 'Solar energy information', description: 'Educational content helps people understand solar-cell options before exploring businesses.' },
-      { title: 'Seller shop management', description: 'Businesses create and manage shop profiles with company and contact information.' },
-      { title: 'Product management', description: 'Sellers add and maintain products associated with their shops.' },
-      { title: 'Customer reviews', description: 'Customers review shops to help others assess businesses and build trust.' },
+      { title: 'Customer & Seller Authentication', description: 'Separate registration and sign-in flows for customers and sellers.' },
+      { title: 'Shop & Product Management', description: 'Sellers can create and manage shop profiles and products.' },
+      { title: 'Solar Information', description: 'Educational content helps users understand solar-energy options before exploring providers.' },
+      { title: 'Customer Reviews', description: 'Customers can review shops and help others assess installation businesses.' },
     ],
     reflection: [
       {
         heading: 'From mock data to working CRUD',
-        body: 'After the presentation, the team received seven additional days to improve the project. I returned to the codebase, learned more about routes, API requests, form data, state, database relationships, and debugging across layers. By final submission, the application could complete Create, Read, Update, and Delete operations and persist data in the database.',
-      },
-      {
-        heading: 'Product and engineering judgment',
-        body: 'React and Tailwind CSS were not required, but I chose them after learning them in the HIPPO bootcamp. The technology was not the problem; my initial scope and dependency assumptions were. This experience taught me to choose technology based on team experience, project scope, dependencies, and time—not only popularity or capability.',
+        body: 'The initial build period was only four days. Although much of the frontend was ready for the hackathon presentation, database persistence was not yet reliable. Rather than presenting incomplete functionality as finished, I used temporary mock data to demonstrate the intended user experience. The team then received seven additional days to improve the project. During that period, I worked through API requests, routes, form data, state management, backend integration, and database relationships. By final submission, the application supported working Create, Read, Update, and Delete operations with persistent database data.',
       },
       {
         heading: 'What I learned',
-        body: 'SUN SOLA strengthened my system thinking: identify dependencies early, design data structures before implementation, communicate across roles, ask for feedback, and recover methodically when a first version does not work as intended.',
+        body: 'SUN SOLA taught me that building a frontend is not only about implementing screens. A working product depends on the relationship between UI, APIs, data structures, backend logic, and team dependencies. I also learned to identify integration risks earlier, reduce scope when necessary, and choose technology based on the team’s experience and available time rather than popularity alone.',
       },
     ],
     media: [
-      { label: 'Final website hero', description: 'A screenshot of the completed system after database integration.', status: 'Asset to add' },
-      { label: 'Product screens', description: 'Home, login or registration, shop listing, shop detail, products, reviews, and seller management.', status: 'Asset to add' },
-      { label: 'Figma and design system', description: 'Original high-fidelity wireframes and the design system used for implementation.', status: 'Asset to add' },
+      { label: 'Final product screens', description: 'Home, authentication, shop listings, shop details, product management, and reviews.', status: 'Asset to add' },
       { label: 'Database ERD', description: 'The relationships among sellers, customers, shops, products, reviews, and images.', status: 'Asset to add' },
-      { label: 'Architecture and data flow', description: 'React frontend → REST API → Node or Express backend → MySQL database.', status: 'Asset to add' },
-      { label: 'Business plan / pitch deck', description: 'Background, SDG rationale, objectives, solution direction, Figma, and database documentation.', status: 'Asset to add' },
-      { label: 'Project links', description: 'Live demo, GitHub repository, Figma prototype, or a short walkthrough video.', status: 'Asset to add' },
+      { label: 'Architecture & data flow', description: 'Frontend → API → backend → database.', status: 'Asset to add' },
+      { label: 'Design & implementation', description: 'Figma design system compared with implemented React interfaces.', status: 'Asset to add' },
+      { label: 'GitHub / demo', description: 'Repository, live demo, or short walkthrough of the completed system.', status: 'Asset to add' },
     ],
     proof: ['Completed a functional CRUD application after the improvement period', 'Built as a three-person first-year capstone during SIT Hackathon 2025', 'Used the project to connect UI implementation with APIs, data models, and database persistence'],
-    evidenceNeeded: ['Final system screenshots and a product walkthrough', 'GitHub repository or public-safe code excerpt', 'Figma prototype, Business Plan, ERD, and optional demo video'],
+    evidenceNeeded: ['Final product screens and a product walkthrough', 'Database ERD and architecture / data-flow visual', 'Figma design system, GitHub repository, and optional live demo'],
     limitations: ['Student hackathon and capstone project; this case study focuses on my frontend and cross-functional contribution, not sole ownership of the complete system.', 'The marketplace supports discovery and direct business contact; it was not designed as a full in-platform payment flow.'],
     skills: {
-      hard: ['React', 'Tailwind CSS', 'JavaScript', 'REST API Integration', 'CRUD Operations', 'MySQL', 'Database Relationships', 'Back-end Integration', 'Figma', 'UI Implementation', 'Git', 'GitHub', 'Debugging'],
-      soft: ['Problem Solving', 'Resilience', 'Cross-functional Collaboration', 'Communication', 'Adaptability', 'Self-directed Learning', 'Working Under Pressure', 'Time Management', 'Seeking Feedback & Mentorship'],
+      hard: ['React', 'Tailwind CSS', 'REST API Integration', 'CRUD', 'MySQL', 'Database Relationships', 'Debugging'],
+      soft: ['Cross-functional Collaboration', 'Problem Solving', 'Communication', 'Adaptability'],
     },
     roleFocus: { 'business-analyst': 'supporting', 'data-analyst': 'supporting', 'system-analyst': 'primary', 'product-manager': 'supporting' },
-    tags: ['React', 'Tailwind CSS', 'REST API Integration', 'MySQL', 'System Thinking'],
+    tags: ['React', 'Tailwind CSS', 'REST API Integration', 'CRUD', 'MySQL'],
   },
 ];
 

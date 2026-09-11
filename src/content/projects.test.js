@@ -40,7 +40,7 @@ test('maps project relevance to the target roles', () => {
   expect(hippo.roleFocus['system-analyst']).toBe('primary');
 });
 
-test('adds Sun Sola as a full-stack case study with transparent evidence placeholders', () => {
+test('keeps Sun Sola aligned with its discovery-platform and CRUD delivery story', () => {
   const sunSola = getProjectBySlug('sun-sola');
 
   expect(sunSola).toMatchObject({
@@ -52,12 +52,12 @@ test('adds Sun Sola as a full-stack case study with transparent evidence placeho
     { label: 'Build period', value: '4-day hackathon + 7-day improvement period' },
   ]));
   expect(sunSola.featureList).toEqual(expect.arrayContaining([
-    expect.objectContaining({ title: 'Seller shop management' }),
-    expect.objectContaining({ title: 'Customer reviews' }),
+    expect.objectContaining({ title: 'Customer & Seller Authentication' }),
+    expect.objectContaining({ title: 'Shop & Product Management' }),
   ]));
   expect(sunSola.media).toEqual(expect.arrayContaining([
     expect.objectContaining({ label: 'Database ERD', status: 'Asset to add' }),
-    expect.objectContaining({ label: 'Business plan / pitch deck', status: 'Asset to add' }),
+    expect.objectContaining({ label: 'GitHub / demo', status: 'Asset to add' }),
   ]));
 });
 

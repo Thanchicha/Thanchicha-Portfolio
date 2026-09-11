@@ -56,3 +56,17 @@ test('renders Sun Sola as a complete case study with architecture learning and m
   expect(screen.getByText('Database ERD')).toBeInTheDocument();
   expect(screen.getByText('Skills developed')).toBeInTheDocument();
 });
+
+test('renders the park safety project with Design Thinking and validation evidence', () => {
+  render(
+    <MemoryRouter initialEntries={['/work/suan-thonburi-rom-park']}>
+      <Routes><Route path="/work/:slug" element={<CaseStudyPage />} /></Routes>
+    </MemoryRouter>,
+  );
+
+  expect(screen.getByRole('heading', { name: 'Suan Thonburi Rom Park Safety Innovation' })).toBeInTheDocument();
+  expect(screen.getByText('What testing changed')).toBeInTheDocument();
+  expect(screen.getByText('Emergency Alarm Box')).toBeInTheDocument();
+  expect(screen.getByText('Testing results comparison')).toBeInTheDocument();
+  expect(screen.getByText('Skills developed')).toBeInTheDocument();
+});

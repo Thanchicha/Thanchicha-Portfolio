@@ -168,6 +168,87 @@ const projects = [
     roleFocus: { 'business-analyst': 'supporting', 'data-analyst': 'supporting', 'system-analyst': 'primary', 'product-manager': 'supporting' },
     tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Git', 'GitHub', 'Vercel', 'Responsive UI implementation'],
   },
+  {
+    slug: 'suan-thonburi-rom-park',
+    title: 'Suan Thonburi Rom Park Safety Innovation',
+    category: 'Design Thinking & Innovation',
+    role: 'User Research · Ideation · Prototype Development · User Testing',
+    date: '2025',
+    headline: 'Applying Design Thinking to help people feel safer in a public park.',
+    summary: 'A first-year team project that used field research, prototype testing, and user feedback to explore safety improvements for Suan Thonburi Rom Park near KMUTT.',
+    facts: [
+      { label: 'Role', value: 'User Research · Ideation · Prototype Development · User Testing' },
+      { label: 'Project type', value: 'First-year Design Thinking / Innovation project' },
+      { label: 'Course', value: 'DSI101' },
+      { label: 'Duration', value: 'One semester' },
+      { label: 'Theme', value: 'SDG 11 · Sustainable Cities and Communities' },
+    ],
+    sections: [
+      {
+        heading: 'The starting point',
+        body: 'This was one of my first university projects and my first introduction to Design Thinking. Our task was to identify a real-world problem outside the university and develop a response grounded in people’s needs rather than assumptions. We selected Suan Thonburi Rom Park because we could visit repeatedly, observe how the space was used, and talk directly with visitors.',
+      },
+      {
+        heading: 'Empathize: learning from real users',
+        body: 'We conducted field interviews with park users and found recurring concerns about safety after dark: poorly lit areas, unsafe walking routes, theft, groups gathering in secluded locations, and insufficient security coverage for the park’s size. For me personally, approaching unfamiliar people was challenging at first, but the process taught me to ask open questions, listen carefully, and separate user evidence from my own assumptions.',
+      },
+      {
+        heading: 'Define: turning observations into a problem',
+        body: 'We organized field findings into personas, journey maps, pain points, user needs, and problem statements. The work revealed two connected gaps: security personnel could not cover the entire park, and there was no simple emergency-reporting flow or practical way to organize community support. This helped us move from “the park needs more security” to the more actionable question: how might we help people feel safer and access help more easily?',
+      },
+      {
+        heading: 'Ideate and prototype',
+        body: 'Instead of committing to one idea immediately, we developed three alternatives and made each tangible enough to test: an Emergency Alarm Box that sends an alert and location to security staff; a Guardian Robot with a camera and sensors for patrol support; and a Suan Thon Guard Website for recruiting and coordinating volunteers. Prototypes included concept sketches, interface mockups, a 3D Alarm Box model, a security-guard app concept, and a volunteer website concept.',
+      },
+      {
+        heading: 'What testing changed',
+        body: 'Returning to users changed our view of the three concepts. The Emergency Alarm Box received the strongest response because it was simple, immediately understandable, and directly supported emergency response. The Guardian Robot showed potential but raised cost, maintenance, and privacy concerns. The volunteer website addressed a weaker need than we expected: most respondents were not interested in participating as safety volunteers. This confirmed that an innovative idea still needs evidence that it fits a real user need.',
+      },
+    ],
+    featureList: [
+      { title: 'Emergency Alarm Box', description: 'A physical emergency button at key locations that sends an alert and user location to security staff.' },
+      { title: 'Guardian Robot', description: 'A patrol concept with a 180-degree camera and sensors to detect unusual activity and notify staff.' },
+      { title: 'Suan Thon Guard Website', description: 'A volunteer recruitment and coordination concept explored as a community-support alternative.' },
+    ],
+    reflection: [
+      {
+        heading: 'My contribution',
+        body: 'I participated throughout the process: conducting field research and interviews, documenting pain points, contributing to personas and journey maps, helping define the safety problem, generating and refining concepts, presenting prototypes, collecting follow-up feedback, interpreting results, and supporting the final presentation.',
+      },
+      {
+        heading: 'A prototype is a way to learn',
+        body: 'The project taught me that a prototype does not need to be a finished product. Its job is to make an idea concrete enough for people to react to it. That perspective later became useful in product discovery, feature prioritization, hackathons, and startup work.',
+      },
+      {
+        heading: 'What I carried forward',
+        body: 'This project reshaped my definition of innovation. It is not only a creative idea; it is finding a meaningful problem, understanding the people affected, developing alternatives, and validating them continuously. The fieldwork also made me more confident communicating with users and asking follow-up questions.',
+      },
+    ],
+    media: [
+      { label: 'Park research hero', description: 'A park photograph that introduces the setting and Design Thinking context.', status: 'Asset to add' },
+      { label: 'Field research evidence', description: 'Public-safe photos from observation or interviews, with no personally identifiable information.', status: 'Asset to add' },
+      { label: 'Problem evidence', description: 'Photos of dimly lit or secluded areas that informed the safety problem.', status: 'Asset to add' },
+      { label: 'Persona and user journey', description: 'One persona and one journey map showing how research was synthesized.', status: 'Asset to add' },
+      { label: 'Design Thinking process', description: 'A visual summary of Empathize → Define → Ideate → Prototype → Test.', status: 'Asset to add' },
+      { label: 'Three solution concepts', description: 'Emergency Alarm Box, Guardian Robot, and Suan Thon Guard Website shown together.', status: 'Asset to add' },
+      { label: 'Prototype evidence', description: '3D Alarm Box model and security-guard application prototype.', status: 'Asset to add' },
+      { label: 'Testing results comparison', description: 'A comparison of 4.53, 4.00, and 3.63 user-satisfaction results with key feedback.', status: 'Asset to add' },
+      { label: 'Research documents', description: 'Final presentation, Figma prototype, persona, journey map, and public-safe research evidence.', status: 'Asset to add' },
+    ],
+    proof: [
+      'Emergency Alarm Box — 4.53 / 5 user satisfaction',
+      'Guardian Robot — 4.00 / 5 user satisfaction',
+      'Suan Thon Guard Website — 3.63 / 5 user satisfaction; 73.68% were not interested in volunteering',
+    ],
+    evidenceNeeded: ['Final presentation or design-process documentation', 'Public-safe research artifacts, with interviewee information removed', 'Prototype visuals, Figma link, and raw testing results if suitable for sharing'],
+    limitations: ['First-year course project; scores represent user-testing feedback within this project, not a deployed safety system.', 'No interviewee-identifying information should be published in the portfolio.'],
+    skills: {
+      hard: ['Design Thinking', 'User Research', 'Field Research', 'User Interviews', 'Problem Definition', 'User Persona', 'User Journey Mapping', 'Pain Point Analysis', 'Brainstorming', 'Ideation', 'Prototyping', 'User Testing', 'Hypothesis Validation'],
+      soft: ['Communication', 'Active Listening', 'Empathy', 'Team Collaboration', 'Presentation', 'Adaptability', 'Confidence Building', 'Critical Thinking'],
+    },
+    roleFocus: { 'business-analyst': 'primary', 'data-analyst': 'supporting', 'system-analyst': 'supporting', 'product-manager': 'primary' },
+    tags: ['User Research', 'Problem Definition', 'User Testing', 'Design Thinking', 'Prototyping'],
+  },
 ];
 
 const supportingProjects = [

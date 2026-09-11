@@ -16,7 +16,7 @@ test('does not expose unfinished claim markers', () => {
   expect(JSON.stringify(featuredProjects)).not.toContain('TO ADD');
 });
 
-test('adds HIPPO as a full case study with verified recognition and project facts', () => {
+test('keeps HIPPO focused on the classroom-booking redesign and verified recognition', () => {
   const hippo = getProjectBySlug('hello-world');
   expect(hippo).toMatchObject({
     title: 'Hello World HIPPO Hackathon 2025',
@@ -28,7 +28,8 @@ test('adds HIPPO as a full case study with verified recognition and project fact
     { label: 'Duration', value: '1-month bootcamp + 7-day hackathon' },
   ]));
   expect(hippo.media).toEqual(expect.arrayContaining([
-    expect.objectContaining({ label: 'Final product screens', status: 'Asset to add' }),
+    expect.objectContaining({ label: 'Before & After', status: 'Asset to add' }),
+    expect.objectContaining({ label: 'Hackathon Evidence', status: 'Asset to add' }),
   ]));
 });
 

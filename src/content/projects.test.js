@@ -66,7 +66,7 @@ test('adds the park safety project with user-validation results and media placeh
 
   expect(parkSafety).toMatchObject({
     title: 'Suan Thonburi Rom Park Safety Innovation',
-    role: 'User Research · Ideation · Prototype Development · User Testing',
+    role: 'User Research · Problem Definition · Prototyping · User Testing',
   });
   expect(parkSafety.featureList).toEqual(expect.arrayContaining([
     expect.objectContaining({ title: 'Emergency Alarm Box' }),
@@ -78,7 +78,7 @@ test('adds the park safety project with user-validation results and media placeh
     'Suan Thon Guard Website — 3.63 / 5 user satisfaction; 73.68% were not interested in volunteering',
   ]));
   expect(parkSafety.media).toEqual(expect.arrayContaining([
-    expect.objectContaining({ label: 'Testing results comparison', status: 'Asset to add' }),
+    expect.objectContaining({ label: 'User testing results', status: 'Asset to add' }),
   ]));
 });
 

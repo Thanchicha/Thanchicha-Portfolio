@@ -2,7 +2,16 @@ import { Link } from 'react-router-dom';
 import { projects, supportingProjects } from '../content/projects';
 
 function ProjectCard({ project, supporting = false }) {
-  return <article className="card flex flex-col bg-white p-6 dark:bg-[#110f17]"><div className="mb-4 font-mono text-xs uppercase tracking-widest text-[#EC4899]">{project.category}</div><h2 className="text-2xl font-bold text-text-primary">{project.title}</h2><p className="mt-3 flex-grow text-sm leading-relaxed text-text-secondary">{project.summary}</p><div className="mt-6 flex flex-wrap gap-2">{project.tags?.slice(0, 3).map((tag) => <span key={tag} className="rounded-full bg-[#f1f5f9] px-3 py-1 text-xs text-text-secondary dark:bg-gray-800">{tag}</span>)}</div>{!supporting && <Link to={`/work/${project.slug}`} className="mt-7 font-mono text-sm font-bold text-[#6366F1]">Open case study →</Link>}</article>;
+  return (
+    <article className="card flex flex-col bg-white p-6 dark:bg-[#110f17]">
+      <div className="mb-4 font-mono text-xs uppercase tracking-widest text-[#EC4899]">{project.category}</div>
+      <h2 className="text-2xl font-bold text-text-primary">{project.title}</h2>
+      <p className="mt-3 flex-grow text-sm leading-relaxed text-text-secondary">{project.summary}</p>
+      {project.award && <p className="mt-4 font-mono text-xs font-semibold text-[#8b5cf6]">{project.award}</p>}
+      <div className="mt-6 flex flex-wrap gap-2">{project.tags?.slice(0, 3).map((tag) => <span key={tag} className="rounded-full bg-[#f1f5f9] px-3 py-1 text-xs text-text-secondary dark:bg-gray-800">{tag}</span>)}</div>
+      {!supporting && <Link to={`/work/${project.slug}`} aria-label={`Open ${project.title} case study`} className="mt-7 font-mono text-sm font-bold text-[#6366F1]">Open case study →</Link>}
+    </article>
+  );
 }
 
 export default function WorkIndexPage() {

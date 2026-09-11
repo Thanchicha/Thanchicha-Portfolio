@@ -6,6 +6,7 @@ import EvidenceList from '../components/EvidenceList';
 import ProjectFacts from '../components/ProjectFacts';
 import ProjectFeatures from '../components/ProjectFeatures';
 import ProjectMedia from '../components/ProjectMedia';
+import ProjectSkills from '../components/ProjectSkills';
 import NotFoundPage from './NotFoundPage';
 
 export default function CaseStudyPage() {
@@ -31,6 +32,7 @@ export default function CaseStudyPage() {
           {project.limitations?.length > 0 && <EvidenceList title="Context and limits" items={project.limitations} />}
         </aside>
       </div>
+      <div className="mx-auto max-w-[1100px] px-6 md:px-12 lg:px-0"><ProjectSkills skills={project.skills} /></div>
       <div className="mx-auto max-w-[1100px] px-6 pb-24 md:px-12 lg:px-0"><Link to="/work" className="font-mono text-sm font-bold text-[#6366F1]">← Back to all work</Link></div>
     </main>
   );

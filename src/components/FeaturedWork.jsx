@@ -24,7 +24,7 @@ export default function FeaturedWork({ projects }) {
   return (
     <section id="projects" className="border-t border-gray-200 dark:border-gray-800 px-6 py-24 md:px-12 lg:px-20">
       <div className="mx-auto max-w-[1400px]">
-        <div className="section-header mb-8">02 SELECTED_WORK</div>
+        <div className="section-header mb-8">03 STARTUP_AND_INTERNSHIP</div>
         <div
           className="card overflow-hidden bg-white dark:bg-[#110f17]"
           onMouseEnter={() => setPaused(true)}

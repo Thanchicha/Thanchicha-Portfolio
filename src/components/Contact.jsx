@@ -1,4 +1,4 @@
-import { ArrowUpRight, Download, Mail, Phone } from 'lucide-react';
+import { ArrowUpRight, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const GithubIcon = ({ size = 24, className = "" }) => (
@@ -56,13 +56,6 @@ export default function Contact() {
 
       <div className="max-w-[1400px] mx-auto relative z-10">
         
-        <div className="flex items-center gap-4 mb-32 md:mb-40">
-          <div className="font-mono text-[#6366F1] font-bold text-sm tracking-widest uppercase shrink-0">
-            // 07 <span className="text-text-muted font-normal ml-2">CONTACT</span>
-          </div>
-          <div className="h-px flex-grow bg-gray-200 dark:bg-gray-800"></div>
-        </div>
-        
         <motion.div 
           variants={containerVariants}
           initial="hidden"
@@ -89,19 +82,9 @@ export default function Contact() {
             variants={itemVariants}
             className="flex flex-col md:flex-row flex-wrap xl:flex-nowrap justify-center gap-4 md:gap-6 mb-20 md:mb-28 w-full max-w-[1200px]"
           >
-            <motion.a whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }} href="/Thanchicha_Hempichit_Resume.pdf" download className="px-6 py-4 md:px-8 bg-[#6366F1] hover:bg-[#4f46e5] text-white rounded-lg font-mono font-bold text-sm md:text-base flex items-center justify-center gap-3 transition-colors shadow-lg shadow-[#6366F1]/25 w-full sm:w-auto whitespace-nowrap">
-              <Download size={20} />
-              Download Resume (PDF)
-            </motion.a>
-            
             <motion.a whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }} href="mailto:thanchicha.hemp@gmail.com" className="px-6 py-4 md:px-8 bg-white/50 dark:bg-[#110f17]/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:border-[#6366F1] dark:hover:border-[#6366F1] hover:text-[#6366F1] text-text-primary rounded-lg font-mono font-medium text-sm md:text-base flex items-center justify-center gap-3 transition-colors shadow-sm w-full sm:w-auto whitespace-nowrap">
               <Mail size={20} />
               Send an Email
-            </motion.a>
-            
-            <motion.a whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }} href="tel:+66909789503" className="px-6 py-4 md:px-8 bg-white/50 dark:bg-[#110f17]/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:border-[#6366F1] dark:hover:border-[#6366F1] hover:text-[#6366F1] text-text-primary rounded-lg font-mono font-medium text-sm md:text-base flex items-center justify-center gap-3 transition-colors shadow-sm w-full sm:w-auto whitespace-nowrap">
-              <Phone size={20} />
-              (+66) 90-978-9503
             </motion.a>
             
             <motion.a whileHover={{ scale: 1.05, y: -5 }} whileTap={{ scale: 0.95 }} href="https://github.com/Thanchicha" target="_blank" rel="noreferrer" className="px-6 py-4 md:px-8 bg-white/50 dark:bg-[#110f17]/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 hover:border-[#6366F1] dark:hover:border-[#6366F1] hover:text-[#6366F1] text-text-primary rounded-lg font-mono font-medium text-sm md:text-base flex items-center justify-center gap-3 transition-colors shadow-sm w-full sm:w-auto whitespace-nowrap">
@@ -127,9 +110,6 @@ export default function Contact() {
             </div>
             <a href="mailto:thanchicha.hemp@gmail.com" className="hover:text-[#6366F1] transition-colors">
               thanchicha.hemp@gmail.com
-            </a>
-            <a href="tel:+66909789503" className="hover:text-[#6366F1] transition-colors hidden sm:inline-block">
-              (+66) 90-978-9503
             </a>
           </motion.div>
           

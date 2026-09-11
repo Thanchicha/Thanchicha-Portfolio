@@ -12,6 +12,7 @@ const projects = [
       '7 rental-shop partners represent 470+ costumes',
       'Top 5 of 18 teams at SIT Innoventure',
     ],
+    validationNote: 'This case study presents the work as an early validation stage, with evidence and learnings made explicit so the next product decision is easy to evaluate.',
     sections: [
       {
         heading: 'The opportunity',
@@ -28,6 +29,7 @@ const projects = [
     ],
     evidenceNeeded: ['Link to the current MVP or demo', 'Selected research notes and prototype screens'],
     limitations: ['Early-stage MVP; this page focuses on validation evidence rather than outcome claims.'],
+    roleFocus: { 'business-analyst': 'primary', 'data-analyst': 'supporting', 'system-analyst': 'supporting', 'product-manager': 'primary' },
     tags: ['Product discovery', 'User research', 'Business strategy', 'MVP testing'],
   },
   {
@@ -51,6 +53,7 @@ const projects = [
     ],
     evidenceNeeded: ['Approved screenshots or demo link', 'Public-safe project brief'],
     limitations: ['Prototype and internship work are presented without implying production deployment or operational impact.'],
+    roleFocus: { 'business-analyst': 'primary', 'data-analyst': 'supporting', 'system-analyst': 'primary', 'product-manager': 'primary' },
     tags: ['Requirements', 'AI prototyping', 'QA', 'Documentation'],
   },
   {
@@ -74,6 +77,7 @@ const projects = [
     ],
     evidenceNeeded: ['Repository or demo link', 'Sample output with source citations'],
     limitations: ['This is an exploratory prototype, not investment advice or a trading system.'],
+    roleFocus: { 'business-analyst': 'supporting', 'data-analyst': 'primary', 'system-analyst': 'supporting', 'product-manager': 'supporting' },
     tags: ['APIs', 'Generative AI', 'Automation', 'Data analysis'],
   },
   {
@@ -97,23 +101,82 @@ const projects = [
     ],
     evidenceNeeded: ['Research summary or presentation excerpt'],
     limitations: ['Competition concept; no claim is made about subsequent adoption or business results.'],
+    roleFocus: { 'business-analyst': 'primary', 'data-analyst': 'primary', 'system-analyst': 'supporting', 'product-manager': 'primary' },
     tags: ['User research', 'Synthesis', 'Problem framing', 'Strategy'],
+  },
+  {
+    slug: 'hello-world',
+    title: 'Hello World HIPPO Hackathon 2025',
+    category: 'Team project and competition',
+    role: 'Front-end Developer',
+    date: 'Jan–Feb 2025',
+    award: '1st Place + Popular Vote',
+    headline: 'Redesigning KMUTT SIT’s classroom booking website into a clearer, more modern booking experience.',
+    summary: 'An 8-person cross-functional team redesigned the School of Information Technology’s classroom booking website after a 1-month voluntary bootcamp and a 7-day hackathon.',
+    facts: [
+      { label: 'Role', value: 'Front-end Developer' },
+      { label: 'Team', value: '8 cross-functional members' },
+      { label: 'Duration', value: '1-month bootcamp + 7-day hackathon' },
+      { label: 'Organization', value: 'School of Information Technology, KMUTT' },
+      { label: 'Type', value: 'Bootcamp & Hackathon project' },
+    ],
+    sections: [
+      {
+        heading: 'The problem',
+        body: 'The existing classroom booking website had an outdated interface that no longer matched modern user expectations. The team needed to improve both the visual experience and the clarity of booking tasks for students and staff.',
+      },
+      {
+        heading: 'The solution',
+        body: 'We redesigned the system into a cleaner booking experience with a clearer reservation flow, modern visual structure, role-aware access, and practical guidance for users.',
+      },
+      {
+        heading: 'My contribution',
+        body: 'I translated the design team’s interface direction into responsive web pages, built layouts and visual structure, styled components, clarified implementation details with designers, and collaborated with another frontend developer who focused more on logic and backend communication.',
+      },
+    ],
+    featureList: [
+      { title: 'Login authentication', description: 'Users sign in before accessing the booking system.' },
+      { title: 'Role-based access', description: 'Different user roles receive appropriate permissions.' },
+      { title: 'Room reservation', description: 'Users reserve classrooms through a structured booking flow.' },
+      { title: 'Booking details form', description: 'Users provide the purpose of a reservation and related details.' },
+      { title: 'Date and time selection', description: 'Users choose their intended booking schedule.' },
+      { title: 'Help and FAQ', description: 'Guidance helps users understand the redesigned system.' },
+    ],
+    reflection: [
+      {
+        heading: 'Challenge and learning',
+        body: 'As an early-year student new to frontend development, I worked through a tight deadline and technical blockers by breaking work into smaller tasks, researching independently, discussing with teammates, asking mentors for guidance, and collaborating with backend teammates.',
+      },
+      {
+        heading: 'Result',
+        body: 'Our team completed the redesigned classroom booking website within seven days and received 1st Place and the Popular Vote Award. The experience strengthened my confidence in web development, cross-functional collaboration, communication, and delivery under pressure.',
+      },
+    ],
+    media: [
+      { label: 'Final product screens', description: 'Home, booking, booking form, and help or FAQ screens.', status: 'Asset to add' },
+      { label: 'Before and after comparison', description: 'The legacy booking site compared with the redesign.', status: 'Asset to add' },
+      { label: 'Design handoff', description: 'Figma designs or wireframes used for implementation.', status: 'Asset to add' },
+      { label: 'Project evidence', description: 'Live demo, repository, slides, demo video, award proof, or team photos.', status: 'Asset to add' },
+    ],
+    proof: ['1st Place — Hello World HIPPO Hackathon 2025', 'Popular Vote Award', 'Delivered within a 7-day hackathon'],
+    evidenceNeeded: ['Final product screens and before/after comparison', 'Optional demo, repository, slides, or award proof'],
+    limitations: ['Team hackathon project; this case study describes my frontend contribution and collaboration without attributing the full system to one person.'],
+    skills: {
+      hard: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Git', 'GitHub', 'Vercel', 'Front-end Development', 'UI Implementation', 'Responsive Layout'],
+      soft: ['Teamwork', 'Cross-functional Collaboration', 'Communication', 'Problem Solving', 'Adaptability', 'Time Management', 'Working Under Pressure', 'Self-directed Learning'],
+    },
+    roleFocus: { 'business-analyst': 'supporting', 'data-analyst': 'supporting', 'system-analyst': 'primary', 'product-manager': 'supporting' },
+    tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Git', 'GitHub', 'Vercel', 'Responsive UI implementation'],
   },
 ];
 
 const supportingProjects = [
   {
-    slug: 'hello-world',
-    title: 'SIT Hello World',
-    category: 'Community project',
-    summary: 'A compact project demonstrating collaboration, communication, and an interest in making technology approachable.',
-    tags: ['Collaboration', 'Communication'],
-  },
-  {
     slug: 'paw-guardian',
     title: 'Paw Guardian',
     category: 'Concept project',
     summary: 'A concept exploring how a digital service could help people care for pets with clearer information and coordination.',
+    roleFocus: { 'business-analyst': 'supporting', 'data-analyst': 'supporting', 'system-analyst': 'supporting', 'product-manager': 'supporting' },
     tags: ['Service thinking', 'Concepting'],
   },
   {
@@ -121,9 +184,27 @@ const supportingProjects = [
     title: 'Sun Sola',
     category: 'Concept project',
     summary: 'A concept project focused on communicating an everyday sustainability idea through a simple digital experience.',
+    roleFocus: { 'business-analyst': 'supporting', 'data-analyst': 'supporting', 'system-analyst': 'supporting', 'product-manager': 'supporting' },
     tags: ['Ideation', 'Storytelling'],
   },
 ];
+
+const projectContexts = [
+  {
+    title: 'Hackathon & Competition',
+    description: 'Time-bound team challenges where I practiced research, prototyping, communication, and delivery under constraints.',
+    projects: [
+      projects.find((project) => project.slug === 'cp-axtra'),
+      projects.find((project) => project.slug === 'hello-world'),
+      ...supportingProjects,
+    ],
+  },
+  {
+    title: 'Individual Project',
+    description: 'Self-directed experiments used to explore new tools and turn a personal question into a working prototype.',
+    projects: [projects.find((project) => project.slug === 'ai-investment-news-automation')],
+  },
+].filter((context) => context.projects.every(Boolean));
 
 const featuredProjects = projects.slice(0, 4);
 
@@ -131,4 +212,4 @@ function getProjectBySlug(slug) {
   return [...projects, ...supportingProjects].find((project) => project.slug === slug);
 }
 
-export { projects, featuredProjects, supportingProjects, getProjectBySlug };
+export { projects, featuredProjects, supportingProjects, projectContexts, getProjectBySlug };

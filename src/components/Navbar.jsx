@@ -62,6 +62,7 @@ export default function Navbar({ toggleTheme, isDark }) {
             <a href={sectionHref('process')} className="hover:text-primary transition-colors">Process</a>
             <a href={sectionHref('skills')} className="hover:text-primary transition-colors">Skills</a>
             <Link to="/work" className="hover:text-primary transition-colors">Work</Link>
+            <Link to="/certificates" className="hover:text-primary transition-colors">Certificates</Link>
             <a href={sectionHref('timeline')} className="hover:text-primary transition-colors">Timeline</a>
             <a href={sectionHref('contact')} className="hover:text-primary transition-colors">Contact</a>
           </div>
@@ -110,6 +111,7 @@ export default function Navbar({ toggleTheme, isDark }) {
                 <a href={sectionHref('process')} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Process</a>
                 <a href={sectionHref('skills')} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Skills</a>
                 <Link to="/work" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Work</Link>
+                <Link to="/certificates" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Certificates</Link>
                 <a href={sectionHref('timeline')} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Timeline</a>
                 <a href={sectionHref('contact')} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Contact</a>
                 

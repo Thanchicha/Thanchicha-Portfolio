@@ -21,3 +21,13 @@ test('renders the Cosaki page from its shareable route', () => {
 
   expect(screen.getByRole('heading', { name: 'Cosaki' })).toBeInTheDocument();
 });
+
+test('renders the HIPPO case study from its shareable route', () => {
+  render(
+    <MemoryRouter initialEntries={['/work/hello-world']}>
+      <App />
+    </MemoryRouter>,
+  );
+
+  expect(screen.getByRole('heading', { name: 'Hello World HIPPO Hackathon 2025' })).toBeInTheDocument();
+});

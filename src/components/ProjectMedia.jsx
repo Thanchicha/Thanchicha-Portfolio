@@ -9,7 +9,7 @@ export default function ProjectMedia({ items }) {
       <div className="grid gap-4 sm:grid-cols-2">
         {items.map((item) => (
           <article key={item.label} className="overflow-hidden rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-[#110f17]">
-            {item.imageUrl && <img src={item.imageUrl} alt={item.alt || item.label} className="h-48 w-full object-cover" loading="lazy" />}
+            {item.imageUrl ? <img src={item.imageUrl} alt={item.alt || item.label} className="h-48 w-full object-cover" loading="lazy" /> : <div className="artifact-placeholder"><div><ImageIcon size={32} strokeWidth={1.3} aria-hidden="true" /><span>Image / document placeholder</span></div></div>}
             <div className="p-5">
               <div className="flex items-start gap-3">
                 <ImageIcon aria-hidden="true" size={18} className="mt-0.5 shrink-0 text-[#8b5cf6]" />

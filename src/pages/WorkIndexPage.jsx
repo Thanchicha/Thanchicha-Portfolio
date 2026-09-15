@@ -2,10 +2,12 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { projects, supportingProjects } from '../content/projects';
 import WorkExplorerControls from '../components/WorkExplorerControls';
 import { DEFAULT_ROLE, groupProjectsByRelevance, WORK_ROLES } from '../utils/workExplorer';
+import ProjectVisual from '../components/ProjectVisual';
 
 function ProjectCard({ project, onSkillSelect }) {
   return (
-    <article className="card flex flex-col bg-white p-6 dark:bg-[#110f17]">
+    <article className="card work-card flex flex-col bg-white p-6 dark:bg-[#110f17]">
+      <ProjectVisual project={project} />
       <div className="mb-4 font-mono text-xs uppercase tracking-widest text-[#EC4899]">{project.category}</div>
       <h2 className="text-2xl font-bold text-text-primary">{project.title}</h2>
       <p className="mt-3 flex-grow text-sm leading-relaxed text-text-secondary">{project.summary}</p>

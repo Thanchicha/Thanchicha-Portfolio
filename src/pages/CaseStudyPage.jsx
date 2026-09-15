@@ -7,6 +7,7 @@ import ProjectFacts from '../components/ProjectFacts';
 import ProjectFeatures from '../components/ProjectFeatures';
 import ProjectMedia from '../components/ProjectMedia';
 import ProjectSkills from '../components/ProjectSkills';
+import ProjectTraction from '../components/ProjectTraction';
 import NotFoundPage from './NotFoundPage';
 
 export default function CaseStudyPage() {
@@ -19,6 +20,7 @@ export default function CaseStudyPage() {
       <div className="mx-auto grid max-w-[1100px] gap-12 px-6 py-16 md:px-12 lg:grid-cols-[1fr_320px] lg:px-0">
         <div>
           <p className="mb-10 max-w-3xl text-lg leading-relaxed text-text-secondary">{project.summary}</p>
+          <ProjectTraction items={project.traction} />
           <ProjectFacts facts={project.facts} />
           {project.sections.map((section) => <CaseStudySection key={section.heading} {...section} />)}
           <ProjectFeatures features={project.featureList} />

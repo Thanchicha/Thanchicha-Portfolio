@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ProjectVisual from './ProjectVisual';
 
 export default function FeaturedWork({ projects }) {
   const reduceMotion = useReducedMotion();
@@ -25,6 +26,7 @@ export default function FeaturedWork({ projects }) {
     <section id="projects" className="border-t border-gray-200 dark:border-gray-800 px-6 py-24 md:px-12 lg:px-20">
       <div className="mx-auto max-w-[1400px]">
         <div className="section-header mb-8">03 STARTUP_AND_INTERNSHIP</div>
+        <h2 className="mb-10 max-w-2xl text-3xl font-bold leading-tight text-text-primary md:text-5xl">Building a startup.<br />Learning through real work.</h2>
         <div
           className="card overflow-hidden bg-white dark:bg-[#110f17]"
           onMouseEnter={() => setPaused(true)}
@@ -54,7 +56,8 @@ export default function FeaturedWork({ projects }) {
 
             <div className="flex flex-col justify-between rounded-2xl bg-[#f8f7ff] p-6 dark:bg-[#1a1724]">
               <div>
-                <div className="mb-5 font-mono text-xs uppercase tracking-widest text-text-muted">Evidence snapshot</div>
+                <ProjectVisual project={activeProject} />
+                <div className="mb-3 mt-6 text-sm font-bold text-text-primary">Evidence snapshot</div>
                 <p className="text-sm leading-relaxed text-text-secondary">
                   {activeProject.proof.length} verified proof points documented in the case study, covering the context, contribution, and learning from this work.
                 </p>
@@ -66,12 +69,12 @@ export default function FeaturedWork({ projects }) {
               <div className="mt-8 flex items-center justify-between">
                 <div className="flex gap-2" aria-label="Featured project navigation">
                   {projects.map((project, index) => (
-                    <button key={project.slug} type="button" aria-label={`Show ${project.title}`} aria-pressed={index === activeIndex} onClick={() => setActiveIndex(index)} className={`h-2 rounded-full transition-all ${index === activeIndex ? 'w-8 bg-[#6366F1]' : 'w-2 bg-[#cbd5e1] dark:bg-gray-600'}`} />
+                    <button key={project.slug} type="button" aria-label={`Show ${project.title}`} aria-pressed={index === activeIndex} onClick={() => setActiveIndex(index)} className="flex h-11 w-11 items-center justify-center rounded-full"><span className={`h-2 rounded-full transition-[width,background-color] ${index === activeIndex ? 'w-6 bg-[#6366F1]' : 'w-2 bg-[#cbd5e1] dark:bg-gray-600'}`} /></button>
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <button type="button" aria-label="Previous featured project" onClick={() => goTo(-1)} className="rounded-full border border-gray-200 p-2 text-text-secondary hover:border-[#6366F1] hover:text-[#6366F1] dark:border-gray-700"><ArrowLeft size={16} /></button>
-                  <button type="button" aria-label="Next featured project" onClick={() => goTo(1)} className="rounded-full border border-gray-200 p-2 text-text-secondary hover:border-[#6366F1] hover:text-[#6366F1] dark:border-gray-700"><ArrowRight size={16} /></button>
+                  <button type="button" aria-label="Previous featured project" onClick={() => goTo(-1)} className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 text-text-secondary hover:border-[#6366F1] hover:text-[#6366F1] dark:border-gray-700"><ArrowLeft size={16} /></button>
+                  <button type="button" aria-label="Next featured project" onClick={() => goTo(1)} className="flex h-11 w-11 items-center justify-center rounded-full border border-gray-200 text-text-secondary hover:border-[#6366F1] hover:text-[#6366F1] dark:border-gray-700"><ArrowRight size={16} /></button>
                 </div>
               </div>
             </div>

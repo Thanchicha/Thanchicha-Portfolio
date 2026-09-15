@@ -44,7 +44,7 @@ export default function Navbar({ toggleTheme, isDark }) {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="fixed w-full top-0 z-40 bg-bg-main/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 font-mono text-xs md:text-sm"
       >
-        <div className="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20 py-4 flex justify-between items-center gap-4">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-12 py-3 flex justify-between items-center gap-4">
           
           {/* Logo Section */}
           <Link to="/" className="flex items-center text-text-primary font-bold tracking-widest whitespace-nowrap">
@@ -56,12 +56,10 @@ export default function Navbar({ toggleTheme, isDark }) {
           </Link>
           
           {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex justify-center items-center gap-6 xl:gap-8 font-semibold uppercase tracking-widest text-text-muted">
-            <a href={sectionHref('hero')} className="hover:text-primary transition-colors">Overview</a>
-            <a href={sectionHref('about')} className="hover:text-primary transition-colors">About</a>
-            <a href={sectionHref('process')} className="hover:text-primary transition-colors">Process</a>
-            <a href={sectionHref('skills')} className="hover:text-primary transition-colors">Skills</a>
+          <div className="hidden xl:flex justify-center items-center gap-5 font-semibold text-xs tracking-wide text-text-secondary">
             <Link to="/work" className="hover:text-primary transition-colors">Work</Link>
+            <a href={sectionHref('about')} className="hover:text-primary transition-colors">About</a>
+            <a href={sectionHref('skills')} className="hover:text-primary transition-colors">Skills</a>
             <Link to="/certificates" className="hover:text-primary transition-colors">Certificates</Link>
             <a href={sectionHref('timeline')} className="hover:text-primary transition-colors">Timeline</a>
             <a href={sectionHref('contact')} className="hover:text-primary transition-colors">Contact</a>
@@ -69,8 +67,8 @@ export default function Navbar({ toggleTheme, isDark }) {
 
           {/* Right Section: Info & Controls */}
           <div className="flex justify-end items-center gap-4 md:gap-6 whitespace-nowrap text-text-secondary">
-            <span className="hidden xl:inline">{time} BKK</span>
-            <div className="hidden xl:flex items-center gap-2">
+            <span className="hidden 2xl:inline">{time} BKK</span>
+            <div className="hidden 2xl:flex items-center gap-2">
               <span className="w-8 text-right">{scrollPercent}%</span>
               <div className="w-12 h-[2px] bg-gray-200 dark:bg-gray-800 relative">
                 <motion.div className="absolute top-0 left-0 h-full bg-primary" style={{ width: `${scrollPercent}%` }} />
@@ -79,7 +77,7 @@ export default function Navbar({ toggleTheme, isDark }) {
             
             <button 
               onClick={toggleTheme}
-              className="hover:text-primary transition-colors ml-auto lg:ml-0"
+              className="flex h-11 w-11 items-center justify-center hover:text-primary transition-colors"
               aria-label="Toggle Theme"
             >
               {isDark ? <Sun size={18} /> : <Moon size={18} />}
@@ -87,7 +85,7 @@ export default function Navbar({ toggleTheme, isDark }) {
 
             {/* Mobile Hamburger Menu Toggle */}
             <button 
-              className="lg:hidden hover:text-primary transition-colors ml-1"
+              className="flex h-11 w-11 items-center justify-center xl:hidden hover:text-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle Menu"
             >
@@ -103,7 +101,7 @@ export default function Navbar({ toggleTheme, isDark }) {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="lg:hidden border-t border-gray-200 dark:border-gray-800 bg-bg-main overflow-hidden shadow-xl"
+              className="xl:hidden border-t border-gray-200 dark:border-gray-800 bg-bg-main overflow-hidden shadow-xl"
             >
               <div className="flex flex-col py-6 px-6 gap-4 font-semibold uppercase tracking-widest text-text-muted text-sm text-center">
                 <a href={sectionHref('hero')} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary py-2 transition-colors">Overview</a>

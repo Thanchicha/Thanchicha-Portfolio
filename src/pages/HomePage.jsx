@@ -7,6 +7,8 @@ import Contact from '../components/Contact';
 import FeaturedWork from '../components/FeaturedWork';
 import ProofStrip from '../components/ProofStrip';
 import { getProjectBySlug, projectContexts } from '../content/projects';
+import { Link } from 'react-router-dom';
+import ProjectVisual from '../components/ProjectVisual';
 
 export default function HomePage() {
   const cosaki = getProjectBySlug('cosaki');
@@ -21,6 +23,7 @@ export default function HomePage() {
       <section id="project-context" className="border-t border-gray-200 px-6 py-24 dark:border-gray-800 md:px-12 lg:px-20">
         <div className="mx-auto max-w-[1400px]">
           <div className="section-header mb-8">04 PROJECTS_BY_CONTEXT</div>
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-6"><h2 className="text-3xl font-bold text-text-primary md:text-5xl">More things I've worked on.</h2><Link to="/work" className="inline-flex min-h-11 items-center font-semibold text-[#7351b3] dark:text-[#c4a8ff]">Explore all projects →</Link></div>
           <p className="mb-12 max-w-2xl text-lg leading-relaxed text-text-secondary">Other work, grouped by the environment where I learned and contributed.</p>
           <div className="space-y-12">
             {projectContexts.map((context) => (
@@ -29,10 +32,12 @@ export default function HomePage() {
                 <p className="mt-3 max-w-2xl text-sm leading-relaxed text-text-secondary">{context.description}</p>
                 <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
                   {context.projects.map((project) => (
-                    <article key={project.slug} className="card p-5 bg-white dark:bg-[#110f17]">
+                    <article key={project.slug} className="card work-card flex flex-col p-5 bg-white dark:bg-[#110f17]">
+                      <ProjectVisual project={project} />
                       <div className="font-mono text-xs uppercase tracking-widest text-[#EC4899]">{project.category}</div>
                       <h3 className="mt-3 text-lg font-bold text-text-primary">{project.title}</h3>
                       <p className="mt-3 text-sm leading-relaxed text-text-secondary">{project.summary}</p>
+                      {project.sections && <Link to={`/work/${project.slug}`} aria-label={`Read ${project.title} case study`} className="mt-auto inline-flex min-h-11 items-center pt-6 text-sm font-semibold text-[#7351b3] dark:text-[#c4a8ff]">Read case study →</Link>}
                     </article>
                   ))}
                 </div>

@@ -2,16 +2,14 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import App from './App';
 
-test('renders the Home headline at the root route', () => {
+test('renders the Home positioning copy at the root route', () => {
   render(
     <MemoryRouter initialEntries={['/']}>
       <App />
     </MemoryRouter>,
   );
 
-  expect(
-    screen.getByRole('heading', { name: /I turn user and business problems/i }),
-  ).toBeInTheDocument();
+  expect(screen.getByText(/Digital Service Innovation student focused on product management/i)).toBeInTheDocument();
 });
 
 test('renders the Cosaki page from its shareable route', () => {
@@ -21,7 +19,15 @@ test('renders the Cosaki page from its shareable route', () => {
     </MemoryRouter>,
   );
 
-  expect(
-    screen.getByRole('heading', { name: 'Cosaki Case Study' }),
-  ).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'Cosaki' })).toBeInTheDocument();
+});
+
+test('renders the HIPPO case study from its shareable route', () => {
+  render(
+    <MemoryRouter initialEntries={['/work/hello-world']}>
+      <App />
+    </MemoryRouter>,
+  );
+
+  expect(screen.getByRole('heading', { name: 'Hello World HIPPO Hackathon 2025' })).toBeInTheDocument();
 });

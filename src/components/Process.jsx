@@ -14,7 +14,7 @@ export default function Process() {
   return (
     <section id="process" className="py-24 px-6 border-t border-gray-200 dark:border-gray-800 bg-bg-main">
       <div className="max-w-[1400px] mx-auto">
-        <div className="section-header mb-8">03 HOW_I_WORK</div>
+        <div className="section-header mb-8">05 HOW_I_WORK</div>
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight max-w-3xl">
             From an unclear problem to a shared, actionable next step.

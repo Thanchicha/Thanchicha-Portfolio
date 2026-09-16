@@ -1,10 +1,11 @@
-import { useMemo, useState } from 'react';
-import { Award, ExternalLink } from 'lucide-react';
+import { useEffect, useMemo, useState } from 'react';
+import { Award, ExternalLink, X } from 'lucide-react';
 import { readCertificates } from '../lib/certificates';
 
 export default function CertificatesPage() {
   const [certificates] = useState(() => readCertificates());
   const [activeCategory, setActiveCategory] = useState('All');
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
   const categories = useMemo(
     () => ['All', ...new Set(certificates.map((certificate) => certificate.category))],
     [certificates],
@@ -12,6 +13,15 @@ export default function CertificatesPage() {
   const visibleCertificates = certificates
     .filter((certificate) => activeCategory === 'All' || certificate.category === activeCategory)
     .sort((first, second) => Number(second.featured) - Number(first.featured));
+
+  useEffect(() => {
+    if (!selectedCertificate) return undefined;
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setSelectedCertificate(null);
+    };
+    window.addEventListener('keydown', closeOnEscape);
+    return () => window.removeEventListener('keydown', closeOnEscape);
+  }, [selectedCertificate]);
 
   return (
     <main className="min-h-screen px-6 pb-24 pt-36 md:px-12 lg:px-20">
@@ -47,10 +57,9 @@ export default function CertificatesPage() {
             {visibleCertificates.map((certificate) => (
               <article key={certificate.id} className="card flex flex-col p-6 md:p-7">
                 {certificate.imageUrl && (
-                  <a
-                    href={certificate.imageUrl}
-                    target="_blank"
-                    rel="noreferrer"
+                  <button
+                    type="button"
+                    onClick={() => setSelectedCertificate(certificate)}
                     aria-label={`View ${certificate.title} certificate`}
                     className="group mb-6 block overflow-hidden rounded-2xl bg-[#EEF0FF] p-2 shadow-[0_12px_28px_rgba(99,102,241,0.10)] outline outline-1 outline-black/[0.05] transition-[transform,box-shadow] duration-200 ease-out focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#6366F1] dark:bg-[#1B1726] dark:outline-white/[0.08] motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-[0_18px_34px_rgba(99,102,241,0.16)]"
                   >
@@ -63,7 +72,7 @@ export default function CertificatesPage() {
                       />
                       <span className="absolute bottom-3 right-3 rounded-full bg-[#0E1B3D]/85 px-3 py-1.5 text-xs font-semibold text-white opacity-0 transition-opacity duration-150 group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none">Open full-size</span>
                     </div>
-                  </a>
+                  </button>
                 )}
                 <div className="flex items-start justify-between gap-4">
                   <span className="rounded-full bg-[#9D85FF]/10 px-3 py-1 font-mono text-xs text-[#7c3aed]">{certificate.category}</span>
@@ -82,6 +91,38 @@ export default function CertificatesPage() {
           </section>
         )}
       </div>
+
+      {selectedCertificate && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#080B16]/80 p-4 backdrop-blur-sm md:p-8"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) setSelectedCertificate(null);
+          }}
+        >
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="certificate-preview-title"
+            className="relative flex max-h-[calc(100vh-2rem)] w-full max-w-6xl flex-col rounded-3xl bg-white p-3 shadow-2xl dark:bg-[#15121D] md:max-h-[calc(100vh-4rem)] md:p-5"
+          >
+            <div className="flex items-center justify-between gap-4 px-2 pb-3 md:px-3">
+              <h2 id="certificate-preview-title" className="min-w-0 truncate text-base font-semibold text-text-primary md:text-lg">{selectedCertificate.title}</h2>
+              <button
+                type="button"
+                autoFocus
+                onClick={() => setSelectedCertificate(null)}
+                aria-label="Close certificate preview"
+                className="inline-flex size-11 shrink-0 items-center justify-center rounded-full bg-[#EEF0FF] text-[#27335A] transition-colors hover:bg-[#DDE0FF] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6366F1] dark:bg-[#282131] dark:text-white dark:hover:bg-[#352C42]"
+              >
+                <X aria-hidden="true" size={20} />
+              </button>
+            </div>
+            <div className="min-h-0 overflow-auto rounded-2xl bg-[#F3F5FA] p-2 dark:bg-[#0D0B12] md:p-4">
+              <img src={selectedCertificate.imageUrl} alt={`${selectedCertificate.title} certificate`} className="mx-auto h-auto max-h-[calc(100vh-10rem)] w-auto max-w-full rounded-lg bg-white shadow-sm dark:bg-[#15121D]" />
+            </div>
+          </section>
+        </div>
+      )}
     </main>
   );
 }

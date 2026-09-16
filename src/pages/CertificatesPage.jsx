@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Award, ExternalLink, FileText } from 'lucide-react';
+import { Award, ExternalLink } from 'lucide-react';
 import { readCertificates } from '../lib/certificates';
 
 export default function CertificatesPage() {
@@ -46,6 +46,25 @@ export default function CertificatesPage() {
           <section className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3" aria-live="polite">
             {visibleCertificates.map((certificate) => (
               <article key={certificate.id} className="card flex flex-col p-6 md:p-7">
+                {certificate.imageUrl && (
+                  <a
+                    href={certificate.imageUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`View ${certificate.title} certificate`}
+                    className="group mb-6 block overflow-hidden rounded-2xl bg-[#EEF0FF] p-2 shadow-[0_12px_28px_rgba(99,102,241,0.10)] outline outline-1 outline-black/[0.05] transition-[transform,box-shadow] duration-200 ease-out focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#6366F1] dark:bg-[#1B1726] dark:outline-white/[0.08] motion-reduce:transition-none hover:-translate-y-0.5 hover:shadow-[0_18px_34px_rgba(99,102,241,0.16)]"
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-white dark:bg-[#0d0b12]">
+                      <img
+                        src={certificate.imageUrl}
+                        alt={`${certificate.title} certificate`}
+                        loading="lazy"
+                        className="h-full w-full object-contain transition-transform duration-300 ease-out motion-reduce:transition-none group-hover:scale-[1.015]"
+                      />
+                      <span className="absolute bottom-3 right-3 rounded-full bg-[#0E1B3D]/85 px-3 py-1.5 text-xs font-semibold text-white opacity-0 transition-opacity duration-150 group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none">Open full-size</span>
+                    </div>
+                  </a>
+                )}
                 <div className="flex items-start justify-between gap-4">
                   <span className="rounded-full bg-[#9D85FF]/10 px-3 py-1 font-mono text-xs text-[#7c3aed]">{certificate.category}</span>
                   <span className="font-mono text-xs text-text-muted">{certificate.issuedDate}</span>
@@ -53,10 +72,9 @@ export default function CertificatesPage() {
                 <h2 className="mt-6 text-2xl font-bold text-text-primary">{certificate.title}</h2>
                 <p className="mt-2 text-sm font-semibold text-[#8b5cf6]">{certificate.issuer}</p>
                 {certificate.description && <p className="mt-4 flex-grow leading-relaxed text-text-secondary">{certificate.description}</p>}
-                {(certificate.credentialUrl || certificate.imageUrl) && (
+                {certificate.credentialUrl && (
                   <div className="mt-6 flex flex-wrap gap-4 border-t border-gray-200 pt-5 text-sm font-semibold dark:border-gray-800">
                     {certificate.credentialUrl && <a className="inline-flex items-center gap-2 text-[#6366F1] hover:text-[#4f46e5]" href={certificate.credentialUrl} target="_blank" rel="noreferrer">View credential <ExternalLink size={15} /></a>}
-                    {certificate.imageUrl && <a className="inline-flex items-center gap-2 text-[#6366F1] hover:text-[#4f46e5]" href={certificate.imageUrl} target="_blank" rel="noreferrer">View document <FileText size={15} /></a>}
                   </div>
                 )}
               </article>

@@ -152,7 +152,7 @@ const projects = [
       soft: ['Cross-functional Collaboration', 'Remote Collaboration', 'Stakeholder Communication', 'Technical Communication'],
     },
     roleFocus: { 'business-analyst': 'primary', 'data-analyst': 'supporting', 'system-analyst': 'primary', 'product-manager': 'primary' },
-    tags: ['Product Discovery', 'Requirement Analysis', 'B2B Product Thinking', 'Human-in-the-loop Design', 'AI-assisted Recommendation'],
+    tags: ['Product Discovery', 'Requirement Analysis', 'Process Understanding', 'B2B Product Thinking', 'Human-in-the-loop Design', 'AI-assisted Recommendation'],
   },
   {
     slug: 'ai-investment-news-automation',

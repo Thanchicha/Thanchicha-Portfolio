@@ -38,6 +38,30 @@ test('changes to the Data Analyst lens', () => {
   expect(screen.getByRole('heading', { name: 'AI Investment News Automation' })).toBeInTheDocument();
 });
 
+test('shows a compact role toolkit before the full-width project results', () => {
+  render(<MemoryRouter initialEntries={['/work?role=business-analyst']}><WorkIndexPage /></MemoryRouter>);
+
+  const toolkitHeading = screen.getByRole('heading', { name: 'Business Analyst Toolkit' });
+  const projectsHeading = screen.getByRole('heading', { name: 'Most relevant' });
+  expect(toolkitHeading.compareDocumentPosition(projectsHeading) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  expect(screen.getByRole('heading', { name: 'Hard skills' })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'Soft skills' })).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Filter projects by Process Understanding' })).toBeInTheDocument();
+  expect(screen.getByText(/SmartProcure.*operational workflow/i)).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: 'Filter projects by Requirement Analysis' }));
+  expect(screen.getByRole('heading', { name: 'SmartProcure' })).toBeInTheDocument();
+  expect(screen.getByText('Stakeholder Communication')).toBeInTheDocument();
+});
+
+test('updates the role toolkit when the selected role changes', () => {
+  render(<MemoryRouter initialEntries={['/work?role=business-analyst']}><WorkIndexPage /></MemoryRouter>);
+
+  fireEvent.click(screen.getByRole('button', { name: 'Data Analyst' }));
+
+  expect(screen.getByRole('heading', { name: 'Data Analyst Toolkit' })).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Filter projects by Data Analysis' })).toBeInTheDocument();
+});
+
 test('searches within the active role lens and offers reset for no results', () => {
   render(<MemoryRouter initialEntries={['/work']}><WorkIndexPage /></MemoryRouter>);
 

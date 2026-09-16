@@ -1,5 +1,7 @@
-// Replace imageUrl with a public image path when the real portrait is ready.
-export const portrait = { imageUrl: '', alt: 'Thanchicha Hempichit' };
+export const portrait = {
+  imageUrl: '/images/thanchicha-portrait.webp',
+  alt: 'Thanchicha Hempichit wearing a university uniform',
+};
 export const studioImage = '/images/product-studio.webp';
 export const visualThemes = {
   cosaki: { color: '#9476df', background: '#ece5fa', label: 'Costume rental discovery', kind: 'catalog' },

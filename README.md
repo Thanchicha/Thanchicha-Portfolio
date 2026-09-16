@@ -1,26 +1,29 @@
-# Thanchicha Hempichit — Product & Business Portfolio
+# Thanchicha Hempichit — Portfolio
 
-An evidence-led portfolio for product management, business analysis, data, and technical collaboration roles.
+A personal portfolio for opportunities in Product Management, Business Analysis, Data Analysis, and System Analysis.
 
-## Routes
+It highlights case studies, startup and internship experience, technical collaboration, certificates, and role-relevant skills.
 
-- `/` — positioning, selected work, capabilities, experience, and contact
-- `/work` — all major and supporting projects
-- `/work/cosaki` — Cosaki startup case study
-- `/work/smartprocure` — SmartProcure internship case study
-- `/work/ai-investment-news-automation` — AI automation prototype
-- `/work/cp-axtra` — CP Axtra research and strategy case study
+## Highlights
 
-## Local workflow
+- Role-based project explorer with search and skill filters
+- Case studies including COSAKI, SmartProcure, Paw Guardian, SUN SOLA, and hackathon work
+- Certificate gallery with full-size previews
+- Responsive React + Vite interface with a private certificate admin route
 
-```powershell
+## Run locally
+
+```bash
 npm install
 npm run dev
+```
+
+## Checks
+
+```bash
 npm run test
 npm run lint
 npm run build
 ```
 
-## Content safety
-
-Project copy is intentionally scoped to evidence supplied by the owner. Early validation is labeled as validation, exploratory prototypes are not presented as production systems, and placeholders are kept out of public-facing copy until supporting assets are supplied.
+Built with React, Vite, Tailwind CSS, and Framer Motion.
